@@ -1,0 +1,185 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+*::-webkit-input-placeholder {
+    /* Google Chrome y Safari */
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+*:-moz-placeholder {
+    /* Firefox anterior a 19 */
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+*::-moz-placeholder {
+    /* Firefox 19 y superior */
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+*:-ms-input-placeholder {
+    /* Internet Explorer 10 y superior */
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+p.bold{
+	font-weight: bold;
+}
+
+form.registro h3{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+}
+
+form.registro label.bold{
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+label.ralew{
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+
+label.ralew small{
+	font-weight: normal;
+}
+
+h3{
+	font-family: 'Raleway', sans-serif
+}
+
+h4{
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 2px solid #fe4918;
+	padding-bottom: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+
+div.paquetes .tabla-precio:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+div.caja{
+	background-color: #fff;
+	border: 1px solid #e1e1e1;
+	padding: 10px;
+	margin: 10px;
+}
+
+div.campo{
+	padding: 20px;
+}
+
+@media only screen and (min-width: 768px){
+	div.campo{
+		float: left;
+		width: 33.3%;
+	}
+}
+
+div.paquetes .tabla-precio:hover{
+	text-transform: none;
+	box-shadow: none;
+}
+
+div.paquetes .tabla-precio input{
+	clear: both;
+	width: 120px;
+	margin: 10px auto 0 auto;
+	display: block;
+}
+
+.contenido-dia{
+	padding: 10px 20px;
+	display: none;
+}
+
+@media only screen and (min-width: 768px){
+	.contenido-dia > div{
+		float: left;
+		width: 33.3%;
+		padding: 5px;
+	}
+}
+
+.contenido-dia > div p{
+	text-align: left;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+
+.contenido-dia > div label{
+	display: block;
+	margin-bottom: 10px;
+}
+
+.contenido-dia > div input{
+	margin-right: 10px;
+}
+
+.contenido-dia > div label time{
+	color: #fe4918;
+	font-weight: bold;
+}
+
+/** Resumen **/
+
+.resumen p{
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+div.resumen div.extras{
+	float: left;
+	width: 50%;
+	padding: 30px;
+}
+
+div.resumen div.extras div.orden{
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+div.extras div.orden input{
+	margin: 10px 0 0 0;
+}
+
+div.resumen div.total{
+	float: right;
+	width: 50%;
+	padding: 30px;
+}
+
+div.resumen input{
+	display: block;
+	margin: 10px auto;
+}
+
+#lista-productos{
+	background-color: rgb(254, 73, 24);
+	border-radius: 5px;
+	color: #fff;
+	padding: 10px 15px;
+	display: none;
+}
+
+#suma-total{
+	color: #fe4918;
+	font-size: 2em;
+	text-align: center;
+	margin-top: -10px;
+	font-weight: bold;
+}
+
+#error{
+	clear: both;
+	padding: 10px;
+	text-align: center;
+	display: none;
+}

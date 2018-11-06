@@ -1,0 +1,37 @@
+.facu {
+    border: 1px solid #dad4d4;
+    text-align: center;
+    border-radius: 2px;
+    padding: 8px;
+    margin-right: 20px;
+}
+.facu:hover {
+    background-color: #dedede;
+
+}
+
+.row-ini {
+    margin-left: 50px!important;
+    margin-top: 80px;
+}
+
+.seleccion {
+    margin-top: 80px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.facu {
+    text-decoration: none!important;
+    color: #292b2c!important;
+    margin-left: 5px;
+}
+strong {
+    margin-left: 10px;
+}
+.share {
+    margin-left: 30px;
+}
+.facu a:hover {
+    text-decoration: none!important;
+    color: #292b2c!important;
+}
