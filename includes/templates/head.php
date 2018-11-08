@@ -37,7 +37,7 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body class="cuerpo">
 
     <div class="barra">
         <div class="contendor clearfix">

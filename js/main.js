@@ -189,3 +189,7 @@ $(function() {
 	});
 
 });
+
+$(function(){
+  $.scrollUp();
+});

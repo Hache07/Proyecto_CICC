@@ -1,5 +1,8 @@
     <?php include_once 'includes/templates/header.php'; ?>
 
+    <span class=""></span>
+        <!--<span class="fas fa-chevron-circle-up"></span>-->
+
     <div class="container">
         <div class="informacion row">
             <div class="col-md-4 col-sm-12 count">
@@ -120,8 +123,6 @@
             <a href="#" class="button transparent">Registro</a>
         </div>
     </div><!--.newletter parallax-->
-              
-
 
     <div class="container-fluid seccion">
         <h2 class="">Convenios</h2>
