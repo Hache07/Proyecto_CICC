@@ -1,8 +1,5 @@
     <?php include_once 'includes/templates/header.php'; ?>
 
-    <span class=""></span>
-        <!--<span class="fas fa-chevron-circle-up"></span>-->
-
     <div class="container">
         <div class="informacion row">
             <div class="col-md-4 col-sm-12 count">

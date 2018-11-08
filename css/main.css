@@ -241,16 +241,6 @@ ul {
 
 }
 
-/** SCROLL **/
-#scrollUp {
-  bottom: 20px;
-  right: 20px;
-
-  padding: 10px 20px;
-  background: #555;
-  color: #fff;
-}
-
 /** INFORMACION **/
 .informacion {
     padding: 20px 0;

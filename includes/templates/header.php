@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/icomoon.css">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -41,6 +42,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+<span class="arriba fas fa-angle-up"></span>
 
     <div class="inicio">
         <div class="row container-fluid">

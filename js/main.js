@@ -152,21 +152,8 @@ $(function() {
 	});
 });
 
-/** Colorbox **/
-
+/** COLORBOX **/
 $('.invitado-info').colorbox({inline:true, width:"50%"});
-
-/** Toastr **/
-/**
-const alerta = document.querySelector('#alerta');
-
-alerta.addEventListener('click', () => {
-	toastr.success('Registro exitoso! ');
-})
-**/
-
-
-
 
 $(function() {
 
@@ -190,6 +177,17 @@ $(function() {
 
 });
 
-$(function(){
-  $.scrollUp();
+$(document).ready(function(){
+	$('.arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 1000);
+	});
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 0) {
+			$('.arriba').slideDown(300);			
+		} else {
+			$('.arriba').slideUp(300);
+		}
+	});
 });
