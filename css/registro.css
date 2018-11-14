@@ -1,4 +1,4 @@
-body{
+body {
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -22,36 +22,29 @@ body{
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
 }
-
-p.bold{
+p.bold {
 	font-weight: bold;
 }
-
-form.registro h3{
+form.registro h3 {
     text-align: center;
     text-transform: uppercase;
     margin: 20px 0 0 0;
 }
-
-form.registro label.bold{
+form.registro label.bold {
 	margin-bottom: 20px;
 	font-weight: bold;
 }
-
-label.ralew{
+label.ralew {
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
 }
-
-label.ralew small{
+label.ralew small {
 	font-weight: normal;
 }
-
-h3{
+h3 {
 	font-family: 'Raleway', sans-serif
 }
-
-h4{
+h4 {
 	text-align: center;
 	text-transform: uppercase;
 	border-bottom: 2px solid #fe4918;
@@ -59,125 +52,104 @@ h4{
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
 }
-
-div.paquetes .tabla-precio:hover{
+div.paquetes .tabla-precio:hover {
     transform: none;
     box-shadow: none;
 }
-
-div.caja{
+div.caja {
 	background-color: #fff;
 	border: 1px solid #e1e1e1;
 	padding: 10px;
 	margin: 10px;
 }
-
-div.campo{
+div.campo {
 	padding: 20px;
 }
-
-@media only screen and (min-width: 768px){
-	div.campo{
+@media only screen and (min-width: 768px) {
+	div.campo {
 		float: left;
 		width: 33.3%;
 	}
 }
-
-div.paquetes .tabla-precio:hover{
+div.paquetes .tabla-precio:hover {
 	text-transform: none;
 	box-shadow: none;
 }
-
-div.paquetes .tabla-precio input{
+div.paquetes .tabla-precio input {
 	clear: both;
 	width: 120px;
 	margin: 10px auto 0 auto;
 	display: block;
 }
-
-.contenido-dia{
+.contenido-dia {
 	padding: 10px 20px;
 	display: none;
 }
-
-@media only screen and (min-width: 768px){
-	.contenido-dia > div{
+@media only screen and (min-width: 768px) {
+	.contenido-dia>div {
 		float: left;
 		width: 33.3%;
 		padding: 5px;
 	}
 }
-
-.contenido-dia > div p{
+.contenido-dia>div p {
 	text-align: left;
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
 }
-
-.contenido-dia > div label{
+.contenido-dia>div label {
 	display: block;
 	margin-bottom: 10px;
 }
-
-.contenido-dia > div input{
+.contenido-dia>div input {
 	margin-right: 10px;
 }
-
-.contenido-dia > div label time{
+.contenido-dia>div label time {
 	color: #fe4918;
 	font-weight: bold;
 }
 
-/** Resumen **/
-
-.resumen p{
+/** RESUMEN **/
+.resumen p {
 	font-size: 1.2em;
 	text-transform: uppercase;
 }
-
-div.resumen div.extras{
+div.resumen div.extras {
 	float: left;
 	width: 50%;
 	padding: 30px;
 }
-
-div.resumen div.extras div.orden{
+div.resumen div.extras div.orden {
 	text-align: left;
 	margin-bottom: 10px;
 }
-
-div.extras div.orden input{
+div.extras div.orden input {
 	margin: 10px 0 0 0;
 }
-
-div.resumen div.total{
+div.resumen div.total {
 	float: right;
 	width: 50%;
 	padding: 30px;
 }
-
-div.resumen input{
+div.resumen input {
 	display: block;
 	margin: 10px auto;
 }
-
-#lista-productos{
+#lista-productos {
 	background-color: rgb(254, 73, 24);
 	border-radius: 5px;
 	color: #fff;
 	padding: 10px 15px;
 	display: none;
 }
-
-#suma-total{
+#suma-total {
 	color: #fe4918;
 	font-size: 2em;
 	text-align: center;
 	margin-top: -10px;
 	font-weight: bold;
 }
-
-#error{
+#error {
 	clear: both;
 	padding: 10px;
 	text-align: center;

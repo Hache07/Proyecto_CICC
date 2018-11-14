@@ -96,22 +96,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-html{
+html {
     box-sizing: border-box;
     overflow-x:hidden;
 }
-
-*, *:before, *:after{
+*, *:before, *:after {
     box-sizing: inherit;
 }
-
-body{
+body {
     background-color: #f2f2f2;
     font-family: 'Raleway', sans-serif;
 }
 
 /** GLOBALES **/
-
 .contendor {
     width: 98%;
     margin: 0 auto;
@@ -232,7 +229,6 @@ ul {
     background-color: #000;
 
 }
-
 h5{
 	border-bottom: 1px solid #fbbb00;
 	padding-bottom: 10px;
@@ -249,7 +245,7 @@ h5{
     margin-top: 80px;
     font-family: 'Raleway', sans-serif;
 }
-.informacion>div{
+.informacion>div {
     text-align: center;
 }
 .informacion i {
@@ -278,82 +274,70 @@ h3.unico {
     margin-bottom: 80px;
 }
 
-/**header**/
-
-div.hero{
+/** HEADER **/
+div.hero {
     background-image: url(../img/slide2.jpg);
     height: 100vh;
     background-position: top center;
     background-size: cover;   
 }
-
-div.contenido-header{
+div.contenido-header {
     padding-top: 80px!important;
 }
-
-@media only screen and (min-width: 768px){
-    div.contenido-header{
+@media only screen and (min-width: 768px) {
+    div.contenido-header {
     padding-top: 10px;
     }
 }
-nav.redes-sociales a{
+nav.redes-sociales a {
     color: #fff;
     font-size: 2em;
     margin-right: 20px;
 }
-nav.redes-sociales a:last-child{
+nav.redes-sociales a:last-child {
     margin-right: 0;
 }
-div.informacion-evento{
+div.informacion-evento {
     text-align: center;
     color: #fff;
 }
-
-@media only screen and (min-width: 768px){
-    div.informacion-evento{
+@media only screen and (min-width: 768px) {
+    div.informacion-evento {
         width: 70%;
         margin: 0 auto;
         margin-top: 50px;
     }
 }
-
-div.informacion-evento p{
+div.informacion-evento p {
     margin: 0;
     display: inline;
     font-size: 20px;
     text-transform: uppercase;
 }
-
-div.informacion-evento p i{
+div.informacion-evento p i {
     color: #fbbb00;
     font-size: 2rem;
 }
-
-p.fecha{
+p.fecha {
     float: left;
 }
-
-p.ciudad{
+p.ciudad {
     float: right;
     text-align: right;
 }
-
-p.slogan{
+p.slogan {
     text-transform: none!important;
 }
-
-p.slogan span{
+p.slogan span {
     font-weight: bold;
 }
-
-h1.nombre-sitio{
+h1.nombre-sitio {
     font-size: 5.9vw;
     text-transform: uppercase;
     font-family: 'Bree Serif', sans-serif;
 }
-
-@media only screen and (min-width: 768px){
-    h1.nombre-sitio{
+@media only screen and (min-width: 768px) {
+    h1.nombre-sitio {
         font-size: 9.5vw;
         margin: 0;
         line-height: 1;
@@ -397,12 +381,12 @@ div.logo img {
     width: 75%;
 }
 @media only screen and (min-width: 480px) {
-    div.logo{
+    div.logo {
         width: 45%;
     }
 }
 @media only screen and (min-width: 768px) {
-    div.logo{
+    div.logo {
         width: 33%;
     }
 }
@@ -411,7 +395,7 @@ div.logo img {
 nav.navegacion-principal {
     display: none;
 }
-nav.navegacion-principal a{
+nav.navegacion-principal a {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.3em;
@@ -423,27 +407,27 @@ nav.navegacion-principal a{
     text-align: center;
     margin-bottom: 20px;
 }
-nav.navegacion-principal a:hover{
+nav.navegacion-principal a:hover {
     background-color: #fbbb00;
 }
 
-nav.navegacion-principal a:last-child{
+nav.navegacion-principal a:last-child {
     border: 1px solid #fff;
     color: #fff;
 }
-nav.navegacion-principal a:last-child:hover{
+nav.navegacion-principal a:last-child:hover {
     color: #fff;
     border: 1px solid #fbbb00;
 }
 
-@media only screen and (min-width: 768px){
-     nav.navegacion-principal{
+@media only screen and (min-width: 768px) {
+     nav.navegacion-principal {
         width: 67%;
         float: right;
         text-align: right;
         display: block;
     }
-    nav.navegacion-principal a{
+    nav.navegacion-principal a {
         padding: 10px 10px;
         display: inline-block;
         width: auto;
@@ -474,8 +458,7 @@ div.menu-movil:hover {
         margin-top: 5px;
     }
 }
-
-div.menu-movil span{
+div.menu-movil span {
     height: 8px;
     margin-bottom: 6px;
     background-color: white;
@@ -483,60 +466,50 @@ div.menu-movil span{
     border-radius: 8px;
 }
 
-/**Talleres**/
-
-section.programa{
+/** TALLERES **/
+section.programa {
     position: relative;
 }
-
-div.contenedor-video{
+div.contenedor-video {
     max-width: 100%;
     overflow-x: hidden;
 }
-
-div.contenido-programa{
+div.contenido-programa {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
 }
-
-div.programa-evento{
+div.programa-evento {
     background-color: rgb(255,255,255, .8);
     padding: 15px;
     margin-top: 80px;
 }
-
-@media only screen and (min-width: 768px){
-    div.programa-evento{
+@media only screen and (min-width: 768px) {
+    div.programa-evento {
         width: 70%;
     }
 }
-
-@media only screen and (min-width: 992px){
-    div.programa-evento{
+@media only screen and (min-width: 992px) {
+    div.programa-evento {
         width: 50%;
     }
 }
-
-nav.menu-programa{
+nav.menu-programa {
     width: 100%;
     border-bottom: 1px solid #fe4918;
     padding-bottom: 10px;
 }
-
-div.ocultar{
+div.ocultar {
     display: none;
 }
-
-@media only screen and (min-width: 768px){
-    nav.menu-programa{
+@media only screen and (min-width: 768px) {
+    nav.menu-programa {
         display: table;
     }
 }
-
-nav.menu-programa a{
+nav.menu-programa a {
     display: block;
     text-align: center;
     color: #000;
@@ -545,76 +518,63 @@ nav.menu-programa a{
     margin-bottom: 10px;
     font-size: 1.2em;
 }
-
-@media only screen and (min-width: 768px){
-    nav.menu-programa a{
+@media only screen and (min-width: 768px) {
+    nav.menu-programa a {
         display: table-cell;
     }
 }
-
-nav.menu-programa a i, div.detalle-evento p i{
+nav.menu-programa a i, div.detalle-evento p i {
     color: #fe4918;
     font-size: 1.2em;
     margin-right: 5px;
 }
 
-/**Detalle Evento**/
-
-div.detalle-evento{
+/** DETALLE EVENTO **/
+div.detalle-evento {
     margin-top: 20px;
     border-bottom: 1px solid #fe4918;
     padding: 0 20px;
 }
-
-div.detalle-evento:nth-child(2){
+div.detalle-evento:nth-child(2) {
     border:none;
 }
-
-div.detalle-evento p{
+div.detalle-evento p {
     margin-bottom: 20px;
 }
 
-/**Nuestros Invitados**/
-
+/** NUESTROS INVITADOS **/
 ul.lista-invitados li {
     padding: 10px;
     float: left;
 }
-
-@media only screen and (min-width: 480px){
-    ul.lista-invitados li{
+@media only screen and (min-width: 480px) {
+    ul.lista-invitados li {
         width: 50%;
     }
 }
-
-@media only screen and (min-width: 768px){
-    ul.lista-invitados li{
+@media only screen and (min-width: 768px) {
+    ul.lista-invitados li {
         width: 33.3%;
     }
 }
-
-div.invitado{
+div.invitado {
     position: relative;
     overflow: hidden;
     transition: all .5s ease;
 }
-
-div.invitado:hover{
+div.invitado:hover {
     -webkit-transform: scale(1.1);
 }
-
-div.invitado img{
+div.invitado img {
     max-width: 100%;
     filter: gray;
     -webkit-filter: grayscale(1);
     -webkit-transition: all .3s ease-in-out;
 }
-
-div.invitado:hover img{
+div.invitado:hover img {
     -webkit-filter: grayscale(0);
 }
-
-div.invitado p{
+div.invitado p {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -626,16 +586,14 @@ div.invitado p{
     font-family: 'Oswald', sans-serif;
     width: 100%;
 }
-
-div.invitado:hover p{
+div.invitado:hover p {
     -webkit-transition: all .8s ease-in-out;
     bottom: -80px;
     opacity: 0;
 }
 
-/**Contador**/
-
-.parallax::before{
+/** CONTADOR **/
+.parallax::before {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -648,24 +606,20 @@ div.invitado:hover p{
     -webkit-filter: brightness(.8);
     filter: brightness(.8);
 }
-
-div.contador{
+div.contador {
     position: relative;
     height: auto;
     margin-top: 20px;
 }
-
-div.contador::before{
+div.contador::before {
     background-image: url(../img/bg-resumen.jpg);
     content: '';
 }
-
-ul.resumen-evento{
+ul.resumen-evento {
     position: relative;
 padding: 120px 0;
 }
-
-ul.resumen-evento li{
+ul.resumen-evento li {
     width: 50%;
     float: left;
     text-align: center;
@@ -674,15 +628,12 @@ ul.resumen-evento li{
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
 }
-
-
-@media only screen and (min-width: 768px){
-    ul.resumen-evento li{
+@media only screen and (min-width: 768px) {
+    ul.resumen-evento li {
         width: 25%;
     }
 }
-
-p.numero{
+p.numero {
     color: #fbbb00;
     font-size: 4em;
     display: block;
@@ -700,21 +651,19 @@ ul.lista-precios>li {
         width: 50%;
     }
 }
-div.tabla-precio{
+div.tabla-precio {
     border: 1px solid #e1e1e1;
     background-color: #fff;
     text-align: center;
     padding: 40px 0;
     transition: all .5s ease;
 }
-
-div.tabla-precio:hover{
+div.tabla-precio:hover {
     -webkit-transform: scale(1.1);
     border: 1px solid #fbbb00;
     box-shadow: 2px 2px 50px #666;
 }
-
-div.tabla-precio ul li{
+div.tabla-precio ul li {
     font-family: 'Oswald', sans-serif;
     font-size: 14px;
     margin-bottom: 20px;
@@ -722,8 +671,7 @@ div.tabla-precio ul li{
     color: #777777;
     line-height: 20px;
 }
-
-div.tabla-precio ul li i{
+div.tabla-precio ul li i {
     display: inline-block;
     vertical-align: top;
     padding: 0 5px;
@@ -732,13 +680,11 @@ div.tabla-precio ul li i{
     -webkit-font-smoothing: antialiased;
     content: '';
 }
-
-div.tabla-precio p.numero{
+div.tabla-precio p.numero {
     color: #000;
     margin-top: 15px;
 }
-
-div.tabla-precio h3{
+div.tabla-precio h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     font-size: 18px;
@@ -753,31 +699,25 @@ div.tabla-precio h3{
     padding: 30px 0;
 }
 
-
-/**Mapa**/
-
+/** MAPA **/
 div.mapa{
     height: 420px;
 }
 
-/**Testimoniales**/
-
-div.testimoniales{
+/** TESTIMONIALES **/
+div.testimoniales {
     padding-bottom: 20px;
 }
-
-div.testimonial{
+div.testimonial {
     padding: 5px;
 }
-
-@media only screen and (min-width: 768px){
-    div.testimonial{
+@media only screen and (min-width: 768px) {
+    div.testimonial {
         float: left;
         width: 33.3%;
     }
 }
-
-blockquote{
+blockquote {
     background-color: #fff;
     border: 1.5px solid #e1e1e1;
     font-size: 12px;
@@ -785,14 +725,12 @@ blockquote{
     margin: 0 0 10px 0;
     padding-bottom: 20px;
 }
-
-blockquote p{
+blockquote p {
     text-align: justify !important;
     font-family: 'Raleway', sans-serif;
     padding: 20px 30px 0 65px;
 }
-
-blockquote p::before{
+blockquote p::before {
     content: '\201c';
     position: absolute;
     left: 30px;
@@ -804,19 +742,16 @@ blockquote p::before{
     color: #fe4918;
     padding-top: 14px;
 }
-
-footer.info-testimonial{
+footer.info-testimonial {
     padding: 0;
 }
-
-footer.info-testimonial img{
+footer.info-testimonial img {
     float: left;
     border-radius: 50%;
     width: 80px;
     margin-left: 30px;
 }
-
-footer.info-testimonial cite{
+footer.info-testimonial cite {
     text-align: left;
     color: #fe4918;
     text-transform: uppercase;
@@ -826,8 +761,7 @@ footer.info-testimonial cite{
     font-weight: bold;
     font-style: normal;
 }
-
-footer.info-testimonial cite span{
+footer.info-testimonial cite span {
     font-weight: normal;
     text-transform: none;
     color: #000;
@@ -835,85 +769,71 @@ footer.info-testimonial cite span{
     margin-top: 5px;
 }
 
-/**Newltter**/
-
-div.newletter{
+/** NEWLETTER**/
+div.newletter {
     position: relative;
     height: auto;
 }
-
-div.newletter::before{
+div.newletter::before {
      background-image: url(../img/bg-inscribir.jpg);
     content: '';
 }
-
-div.newletter .contenido{
+div.newletter .contenido {
     position: relative;
     padding: 100px 0;
     color: #fff;
     text-align: center;
 }
-
-div.newletter .contenido p{
+div.newletter .contenido p {
     font-size: 1.2em;
     text-transform: lowercase;
 }
-
-div.newletter .contenido h3{
+div.newletter .contenido h3 {
     text-transform: uppercase;
     font-size: 7vw;
     color: #fff;
     font-family: 'PT Sans', sans-serif;
 }
-
-div.newletter .contenido a{
+div.newletter .contenido a {
     border: 1.5px solid #fff;
     background-color: transparent;
 }
-
-div.newletter .contenido a:hover{
+div.newletter .contenido a:hover {
     background-color: #fff;
     color: #fe4918;
     font-weight: bold;
 }
 
-/**Cuenta regresiva**/
-
-div.cuenta-regresiva ul li{
+/** CUENTA REGRESIVA **/
+div.cuenta-regresiva ul li {
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-size: 1.6rem;
     text-align: center;
 }
-
-@media only screen and (min-width: 768px){
-    div.cuenta-regresiva ul li{
+@media only screen and (min-width: 768px) {
+    div.cuenta-regresiva ul li {
         width: 25%;
         float: left;
     }
 }
-
-/**Footer**/
-
-footer.site-footer{
+/** FOOTER **/
+footer.site-footer {
     background-color: #004231;
     padding-top: 40px;
     margin-top: 20px;
 }
-
-footer h3{
+footer h3 {
     color: #fff;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5em;
     margin-bottom: 20px;
 }
-
-footer h3 span{
+footer h3 span {
     color: #fbbb00;
 }
-
-footer div.contendor > div{
+footer div.contendor>div {
     color: #fff;
     padding: 0px 20px;
     font-size: 15px;
@@ -926,23 +846,19 @@ footer div.contendor i {
 .footer-informacion li {
     margin-bottom: 10px;
 }
-
-@media only screen and (min-width: 768px){
-    footer div.contendor > div{
+@media only screen and (min-width: 768px) {
+    footer div.contendor>div {
         width: 33.3%;
         float: left;
     }
 }
-
-footer .ultimos-tweets li{
+footer .ultimos-tweets li {
     margin-bottom: 10px;
 }
-
-footer .redes-sociales nav{
+footer .redes-sociales nav {
     text-align: left;
 }
-
-p.copyright{
+p.copyright {
     background-color: #003121;
     color: #fff;
     text-align: center;
@@ -950,7 +866,6 @@ p.copyright{
     font-size: .8em;
     margin: 20px 0 0 0;
 }
-
 
 /** CALENDARIO **/
 div.calendario h3 {
@@ -962,7 +877,6 @@ div.calendario h3 {
     border-top: 15px transparent;
     margin-bottom: 0;
 }
-
 div.calendario::after {
     clear: both;
     display: block;
@@ -991,7 +905,7 @@ div.dia p.titulo {
     text-transform: uppercase;
     font-weight: bold;
 }
-div.dia p{
+div.dia p {
     font-size: 1em;
 }
 div.dia i {
@@ -1016,7 +930,7 @@ div.mensaje.error {
     text-align: center;
 }
 
-/** Admin **/
+/** ADMIN **/
 section.admin nav {
     padding: 20px;
     background-color: #fbbb00;
@@ -1036,17 +950,16 @@ section.admin nav a:hover {
     border-bottom: 4px solid #004231;
 }
 
-/** Agregar admin **/
+/** AGREGAR ADMINISTRADOR **/
 .form-invitado {
     margin: 0 auto;
     margin-bottom: 30px;
 }
-
 input#imagen {
     border: none;
 }
 
-/** Alerts **/
+/** ALERTS **/
 .alerta {
     text-align: center;
     font-family: 'Raleway', sans-serif;
