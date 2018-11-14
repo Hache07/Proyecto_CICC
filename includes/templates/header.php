@@ -42,8 +42,9 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-<span class="arriba fas fa-angle-up"></span>
 
+    <span class="arriba fas fa-angle-up"></span>
+    
     <div class="inicio">
         <div class="row container-fluid">
             <div class="col-md-8 col-sm-8 plena">
@@ -80,7 +81,7 @@
     </div><!--.barra-->
 
     <div class="contenido-video">
-        <video autoplay loop src="video/Sistemas.mp4" type="video.mp4" class="video"></video>
+        <video autoplay loop src="video/Sistemas.mp4" type="video.mp4" class="video" poster=""></video>
         <div class="texto-video">
             Udabol - CICC
         </div>
@@ -91,5 +92,3 @@
             <a href="#" class="button">Registrarse</a>
         </div>
     </div><!--.contenido-video-->
-
-

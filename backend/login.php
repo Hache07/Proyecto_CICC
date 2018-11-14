@@ -1,7 +1,7 @@
 <?php
-session_start();
-
-    if(isset($_POST['submit'])):
+    session_start();
+    include_once 'includes/templates/header.php'; 
+    if(isset($_POST['submit'])) {
         $usuario = $_POST['usuario'];
         $password = $_POST['password'];
         try {
@@ -15,8 +15,13 @@ session_start();
                     $_SESSION['usuario'] = $usuario;
                     $_SESSION['id'] = $id;
                     header('Location: admin_area.php');
-                } else {
-                    $resultado = "Hubo un error";
+                } else { 
+?>                  <div class="container-fluid mt-2">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Error en la autentificacion</strong> 
+                        </div>
+                    </div>
+<?php               header( "refresh:3; url=login.php" ); 
                 }
             }
             $stmt->close();
@@ -24,10 +29,8 @@ session_start();
         } catch(Exception $e) {
             echo "Error: ". $e->getMessage();
         }
-    endif;
+    }
 ?>
-
-<?php include_once 'includes/templates/header.php'; ?>
 
 <section class="seccion contendor">
     <h2 class="login">Iniciar sesión</h2> 

@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -39,6 +40,7 @@
 </head>
 <body class="cuerpo">
 
+    <span class="arriba fas fa-angle-up"></span>
     <div class="barra">
         <div class="contendor clearfix">
             <div class="logo">
@@ -60,8 +62,7 @@
         </div>
     </div><!--.barra-->
 
-    <div class="ini">
-        
+    <div class="ini">        
         <div class="row container-fluid">
             <div class="col-md-8 plena">
 

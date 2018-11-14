@@ -2,8 +2,8 @@
     include_once 'includes/funciones/funciones.php';
     session_start();
     usuario_autenticado();
+    include_once 'includes/templates/header.php'; 
 ?>
-<?php include_once 'includes/templates/header.php'; ?>
 
 <section class="admin seccion contendor">
     <h2>Crear administradores</h2>
@@ -28,18 +28,9 @@
     </div>
 
     <?php
-        if(isset($_POST['submit'])):
-        $usuario = $_POST['usuario'];
-        $password = $_POST['password'];
-            if(strlen($usuario) < 5):
-                echo "El nombre de usuario debe tener mayor a 5 caracteres";
-            endif;
-
-            $opciones = array(
-                'cost' => 12,
-                'salt' => mcrypt_create_iv(22, MCRYPT_DEV_RANDOM)
-            );
-            $hashed_password = password_hash($password, PASSWORD_BCRYPT, $opciones);
+        if(isset($_POST['submit'])) {
+            $usuario = $_POST['usuario'];
+            $password = $_POST['password'];
             
             try {
                 require_once('includes/funciones/conexion.php');
@@ -62,7 +53,7 @@
             } catch(Exception $e) {
                 echo "Error: ". $e->getMessage();
             }
-        endif;
+        }
     ?>
 </section>
 
