@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -35,25 +35,20 @@
 </head>
 <body>
 
-
     <div class="barra">
         <div class="contendor clearfix">
             <div class="logo" style="width: 20%">
                 <a href="index.php"><img src="img/logo.png" alt="logo udabol"></a>
             </div>
-
             <div class="menu-movil">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
         </div>
     </div><!--.barra-->
 
-
-<div class="ini">
-        
+    <div class="ini">
         <div class="row container-fluid">
             <div class="col-md-8 plena">
 
@@ -68,12 +63,10 @@
             </div>
         </div>
     </div><!--.inicio-->
-
     <div class="seleccion container-fluid">
         <div class="share">
-        <p><i class="fas fa-share-alt"></i><strong>Seleccione una Facultad:</strong></p>
+            <p><i class="fas fa-share-alt"></i><strong>Seleccione una Facultad:</strong></p>
         </div>
-
         <div class="row row-ini">
             <a href="sistemas.php" class="col-md-3 facu"><div><i class="fas fa-user"></i> Sistemas y Telecomunicaciones</div></a>
             <a href="arquitectura.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Arquitectura</div></a>
@@ -83,19 +76,19 @@
     </div>
 
 
-<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/jquery.colorbox-min.js"></script>
-<script src="js/main.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 </html>

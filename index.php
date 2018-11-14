@@ -24,7 +24,6 @@
                 <p>Estudiantes</p>
             </div>
         </div>
-
         <h3 class="unico">Descubre las mejores conferencias 28</h3>
         <p>Lorem ipsum dolor sit amet, sint! Lorem ipsum dolor sit amet sint! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed illo, nobis quidem, commodi ipsum enim </p>
     </div>
@@ -100,7 +99,6 @@
                     </footer>
                 </blockquote>
             </div><!--.testimonial-->
-
             <div class="testimonial">
                 <blockquote cite="http://example.com/facts">
                     <p>Lorem lorem es dolor para ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sapiente veritatis eligendi quibusdam est iusto aliquam velit voluptatum ad laudantium harum eos quaerat, veniam debitis dolor! Sapiente fugit excepturi soluta!</p>
@@ -146,5 +144,6 @@
             </div>
         </div>
     </div>
-<?php include_once 'includes/templates/footer.php'; ?>
+
+    <?php include_once 'includes/templates/footer.php'; ?>
 
