@@ -25,7 +25,7 @@
             <div class="invitado-info" id="invitado<?php echo $invitados['id_invitado']; ?>">
                 <h2><?php echo $invitados['nombre_invitado']." ".$invitados['apellido_invitado']; ?></h2>
                 <img src="img/<?php echo $invitados['url_imagen'];?>" alt="Foto invitado Rafael">
-                <p><?php echo $invitados['descripcion']; ?></p>
+                <p class="mt-2"><?php echo $invitados['descripcion']; ?></p>
             </div>
         </div>
     <?php } ?>

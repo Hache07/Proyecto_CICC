@@ -233,6 +233,16 @@ ul {
 
 }
 
+h5{
+	border-bottom: 1px solid #fbbb00;
+	padding-bottom: 10px;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight: bold;
+}
+.invitado-info p {
+    font-family: 'Raleway', sans-serif;
+}
+
 /** INFORMACION **/
 .informacion {
     padding: 20px 0;

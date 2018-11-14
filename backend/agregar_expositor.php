@@ -6,6 +6,10 @@
     if(isset($_POST['submit'])):
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
+        $nacionalidad = $_POST['nacionalidad'];
+        $correo = $_POST['correo'];
+        $telefono = $_POST['telefono'];
+        $empresa = $_POST['empresa'];
         $descripcion = $_POST['descripcion'];
 
 
@@ -16,12 +20,12 @@
 
             try {
                 require_once('includes/funciones/conexion.php');
-                $stmt = $conexion->prepare("INSERT INTO invitados (nombre_invitado, apellido_invitado, descripcion, url_imagen) VALUES (?,?,?,?)");
-                $stmt->bind_param("ssss", $nombre, $apellido, $descripcion, $imagen_url);
+                $stmt = $conexion->prepare("INSERT INTO expositores (nombre_expositor, apellido_expositor, nacionalidad, correo, telefono, empresa, descripcion, url_imagen) VALUES (?,?,?,?,?,?,?,?)");
+                $stmt->bind_param("ssssssss", $nombre, $apellido, $nacionalidad, $correo, $telefono, $empresa, $descripcion, $imagen_url);
                 $stmt->execute();
                 $stmt->close();
                 $conexion->close();
-                header('Location:agregar_invitado.php?exitoso=1');
+                header('Location:agregar_expositor.php?exitoso=1');
             } catch(Exception $e) {
                 echo "Error: ". $e->getMessage();
             }
@@ -41,20 +45,39 @@
                 <strong>El registro se realizo con exito!</strong> 
             </div>
         </div>
-        <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
+        <?php header( "refresh:3; url=agregar_expositor.php" ); ?>
     <?php endif;?>
-
-    <h2>Agregar invitado</h2>
-    <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
+    <h2>Agregar expositor</h2>
+    <form class="invitado" method="POST" action="agregar_expositor.php" enctype="multipart/form-data">
        <div class="form-invitado col-md-6">
             <div class="row">
                 <div class="col">
                     <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="" required>
                 </div>
                 <div class="col">
                     <label for="apellido">Apellido: </label>
-                    <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                    <input type="text" name="apellido" id="apellido" class="form-control" placeholder="" required>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col col-md-5">
+                    <label for="nombre">Nacionalidad: </label>
+                    <input type="text" name="nacionalidad" id="nombre" class="form-control" placeholder="" required>
+                </div>
+                <div class="col col-md-7">
+                    <label for="apellido">Empresa: </label>
+                    <input type="text" name="empresa" id="apellido" class="form-control" placeholder="" required>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col col-md-7">
+                    <label for="nombre">Correo: </label>
+                    <input type="email" name="correo" id="nombre" class="form-control" placeholder="" required>
+                </div>
+                <div class="col col-md-5">
+                    <label for="apellido">Telefono: </label>
+                    <input type="text" name="telefono" id="apellido" class="form-control" placeholder="" required>
                 </div>
             </div><br>
             <div class="form-group">

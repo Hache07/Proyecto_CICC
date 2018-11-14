@@ -28,7 +28,7 @@
             $stmt_two->close();
             $stmt->close();
             $conexion->close();
-            header('Location:agregar_evento.php?exitoso=1');
+            header('Location:agregar_tema.php?exitoso=1');
         } catch(Exception $e) {
             echo "Error: ". $e->getMessage();
         } 
@@ -39,11 +39,11 @@
 <?php include_once 'includes/templates/header.php'; ?>
 
 <section class="admin seccion contendor">
-    <h2>Agregar Evento</h2>
+    
     <?php include_once 'includes/templates/admin_nav.php'; ?>
-
+    <h2>Agregar Tema</h2>
     <div class="form-invitado col-md-5">
-        <form action="agregar_evento.php" method="POST">
+        <form action="agregar_tema.php" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre tema:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el tema a exponer">

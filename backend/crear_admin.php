@@ -6,9 +6,9 @@
 ?>
 
 <section class="admin seccion contendor">
-    <h2>Crear administradores</h2>
+    
     <?php include_once 'includes/templates/admin_nav.php'; ?>
-
+    <h2>Crear administradores</h2>
     <div class="form-invitado col-md-5">
         <form action="crear_admin.php" method="POST" class="login form-horizontal">
             <div class="form-group row">
