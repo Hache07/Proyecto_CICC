@@ -25,8 +25,7 @@
                 $stmt_two->bind_param("ssssss", $nombre, $fecha, $hora, $id_cat, $id_invitado, $clave);
                 $stmt_two->execute();
                 $stmt_two->close();
-                $stmt->close();
-                header('Location:agregar_invitado.php?exitoso=1');
+                $stmt->close(); 
             } catch(Exception $e) {
                 echo "Error: ". $e->getMessage();
             }        

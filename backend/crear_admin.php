@@ -22,7 +22,6 @@
                 $stmt->execute();
 
                 if($stmt->error) {
-                    
                         echo '<div class="container-fluid">
                                 <div class="alert alert-danger" role="alert">
                                     <strong>El usuario ingresado ya existe</strong> 

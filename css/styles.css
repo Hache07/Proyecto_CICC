@@ -57,4 +57,76 @@ body::-webkit-scrollbar-thumb {
     margin-right: 20px;
 }
 
+/** BARRA BACKEND **/
+.navbar {
+    padding: 15px 0;
+    background-color: #004231;
+}
+.menu {
+    display: flex;
+    perspective: 200px;
+}
+.menu ul {
+    display: flex;
+    margin: auto;
+}
+.menu li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-family: 'Oswald', sans-serif;
+    transition: all .3s ease;
+    padding: 10px 10px;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    margin: 0 20px 0 0;
+}
+.menu li a:hover {
+    background-color: #fbbb00;
+    text-decoration: none;
+}
+.submenu {
+    *display: none;
+    flex-direction: column!important;
+    position: absolute;
+    margin-top: 15px!important;
+    background-color: #fbbb00;
+    transform: rotateY(240deg) scale(0);
+    transition: all 1s;
+    box-shadow: 1px 1px 10px 0 #292b2c;
+}
+li:hover > .submenu {
+    transform: rotateY(0deg) scale(1);
+    transition: all 1s;
+}
+.submenu:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 8px solid #fbbb00;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: 15px;
+}
+.submenu li:hover{
+    background-color: #004231;
+}
+.sub li {
+    position: relative;
+}
+.sub {
+    right: -138px;
+    top: 35px;
+}
+.sub:before {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -14px;
+    transform: rotate(-90deg);
+}
+
+
 
