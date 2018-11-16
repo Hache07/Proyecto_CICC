@@ -15,10 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <?php
-        $archivo = basename($_SERVER['PHP_SELF']);
-        $pagina = str_replace(".php","", $archivo);
-    ?>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/fontawesome-all.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -32,35 +28,7 @@
 </head>
 <body>
 
-    <!--<div class="header">
-        <ul class="navbar">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Servicios</a>
-                <ul>
-                    <li><a href="">Calendario</a></li>
-                    <li><a href="">Expositores</a></li>
-                    <li><a href="">Invitados</a>
-                        <ul>
-                            <li><a href="">Calendario</a></li>
-                            <li><a href="">Expositores</a></li>
-                            <li><a href="">Invitados</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="">Ver</a>
-                <ul>
-                    <li><a href="">Calendario</a></li>
-                    <li><a href="">Expositores</a></li>
-                    <li><a href="">Invitados</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>-->
-
-
-<div class="ini">        
+    <div class="ini">        
         <div class="row container-fluid">
             <div class="col-md-8 plena">
 
@@ -80,21 +48,21 @@
 		<nav class="navegacion container">
 			<ul class="menu">
 				<li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a>
+                <li><a href="#">Carreras</a>
                     <ul class="submenu">
-						<li><a href="#">Servicio #1</a></li>
-                        <li><a href="#">Servicio #2</a>
+						<li><a href="panel_medicina.php">Medicina</a></li>
+                        <li><a href="inicio.php">Tecnologia</a>
                             <ul class="submenu sub">
-                                <li><a href="#">Servicio #1</a></li>
-                                <li><a href="#">Servicio #2</a></li>
-                                <li><a href="#">Servicio #3</a></li>
+                                <li><a href="panel_sistemas.php">Sistemas</a></li>
+                                <li><a href="panel_sistemas.php">Telecomunicaciones</a></li>
                             </ul>
                         </li>
-						<li><a href="#">Servicio #3</a></li>
+                        <li><a href="panel_derecho.php">Derecho</a></li>
+                        <li><a href="panel_arquitectura.php">Arquitectura</a></li>
 					</ul></li>
 				<li><a href="#">Servicios</a></li>
 				<li><a href="#">Contacto</a></li>
 			</ul>
 		</nav>
-</div>
+    </div>
 

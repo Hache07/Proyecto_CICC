@@ -27,14 +27,14 @@
                                     <strong>El usuario ingresado ya existe</strong> 
                                 </div>
                             </div>';
-                        header( "refresh:3; url=crear_admin.php" ); 
+                        //header( "refresh:3; url=crear_admin.php" ); 
                 } else {
                         echo '<div class="container-fluid">
                                 <div class="alert alert-success" role="alert">
                                     <strong>Nuevo administrador creado!</strong> 
                                 </div>
                             </div>';
-                        header( "refresh:3; url=crear_admin.php" ); 
+                        //header( "refresh:3; url=crear_admin.php" ); 
                 }
                 $stmt->close();
                 $conexion->close();
@@ -44,7 +44,7 @@
                             <strong>Las contraseñas no coinciden</strong> 
                         </div>
                       </div>';
-                header( "refresh:3; url=crear_admin.php" ); 
+                //header( "refresh:3; url=crear_admin.php" ); 
             }
         }
     ?>
@@ -53,8 +53,8 @@
     <div class="form-invitado col-md-5">
         <form action="crear_admin.php" method="POST" class="login form-horizontal">
             <div class="form-group row">
-                <label for="usuario_txt" class="col-sm-5 col-form-label">Usuario: </label>
-                <div class="col-sm-7">
+                <label for="usuario_txt" class="col-md-5 col-sm-12 col-form-label">Usuario: </label>
+                <div class="col-md-7 col-sm-12">
                     <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingresa un usuario">
                 </div>
             </div>

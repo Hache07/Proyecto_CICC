@@ -70,6 +70,9 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     margin: auto;
 }
+.menu a:hover {
+    text-decoration: none;
+}
 .menu li a {
     color: #fff;
     text-transform: uppercase;
@@ -78,11 +81,11 @@ body::-webkit-scrollbar-thumb {
     transition: all .3s ease;
     padding: 10px 10px;
     display: inline-block;
-    width: auto;
+    width: 100%;
     text-align: center;
     margin: 0 20px 0 0;
 }
-.menu li a:hover {
+.menu>li:hover {
     background-color: #fbbb00;
     text-decoration: none;
 }
@@ -95,6 +98,10 @@ body::-webkit-scrollbar-thumb {
     transform: rotateY(240deg) scale(0);
     transition: all 1s;
     box-shadow: 1px 1px 10px 0 #292b2c;
+}
+.submenu li a {
+    width: 98%;
+    text-align: left;
 }
 li:hover > .submenu {
     transform: rotateY(0deg) scale(1);
@@ -111,14 +118,14 @@ li:hover > .submenu {
     margin-top: -8px;
     margin-left: 15px;
 }
-.submenu li:hover{
-    background-color: #004231;
+.submenu li a:hover{
+    background-color: rgba(0, 0, 0, .2);
 }
 .sub li {
     position: relative;
 }
 .sub {
-    right: -138px;
+    right: -215px;
     top: 35px;
 }
 .sub:before {
