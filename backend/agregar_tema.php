@@ -3,6 +3,7 @@
         session_start();
         usuario_autenticado();
 
+        //if(isset($_POST['submit'])){
             $nombre = $_POST['nombre'];
             $fecha = $_POST['fecha'];
             $hora = $_POST['hora'];
@@ -28,7 +29,8 @@
                 $stmt->close(); 
             } catch(Exception $e) {
                 echo "Error: ". $e->getMessage();
-            }        
+            } 
+        //}       
     ?>
 
     <?php include_once 'includes/templates/header.php'; ?>

@@ -2,7 +2,7 @@
 	Bienvenido <?php echo $_SESSION['usuario']; ?>
 	<hr>
 </div>
-<nav>
+<nav class="sticky-top">
     <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
     <a href="registrados.php">Registrados</a>|
     <a href="agregar_invitado.php">Agregar Invitado</a>|

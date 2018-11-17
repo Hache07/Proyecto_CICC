@@ -16,16 +16,13 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Acme|Anton|Bree+Serif|Josefin+Sans|Merriweather+Sans" rel="stylesheet">
 
-    <?php
-        $archivo = basename($_SERVER['PHP_SELF']);
-        $pagina = str_replace(".php","", $archivo);
-    ?>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/progressbar.css"/>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -46,16 +43,14 @@
             <div class="logo">
                 <a href="index.php"><img src="img/logo.png" alt="logo udabol"></a>
             </div>
-
             <div class="menu-movil">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
-            <nav class="navegacion-principal clearfix">
-                <a href="facultad.php">Conferencia</a>
-                <a href="calendario.php">Calendario</a>
+            <nav class="navegacion-principal clearfix sticky-top ">
+                <a href="facultad.php" onclick='javascript:window.runProgressBar()'>Conferencia</a>
+                <a href="calendario.php" onclick='javascript:window.runProgressBar()'>Calendario</a>
                 <a href="expositores.php">Expositores</a>
                 <a href="registro.php">Reservaciones</a>
             </nav>

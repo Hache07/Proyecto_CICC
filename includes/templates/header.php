@@ -16,11 +16,6 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme|Anton|Bree+Serif|Josefin+Sans|Merriweather+Sans" rel="stylesheet">
 
-    <?php
-        $archivo = basename($_SERVER['PHP_SELF']);
-        $pagina = str_replace(".php","", $archivo);
-    ?>
-    
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fontawesome-all.css">
     <link rel="stylesheet" href="css/main.css">
@@ -29,6 +24,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/progressbar.css"/>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -44,7 +40,6 @@
 <body>
 
     <span class="arriba fas fa-angle-up"></span>
-    
     <div class="inicio">
         <div class="row container-fluid">
             <div class="col-md-8 col-sm-8 plena">
@@ -62,7 +57,7 @@
     </div><!--.inicio-->
 
     <div class="barra">
-        <div class="contendor clearfix">
+        <div class="contendor clearfix sticky-top">
             <div class="logo">
                 <a href="index.php"><img src="img/logo.png" alt="logo udabol"></a>
             </div>
@@ -71,7 +66,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <nav class="navegacion-principal clearfix">
+            <nav class="navegacion-principal clearfix sticky-top">
                 <a href="facultad.php">Conferencia</a>
                 <a href="calendario.php">Calendario</a>
                 <a href="invitados.php">Invitados</a>

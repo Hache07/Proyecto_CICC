@@ -8,7 +8,6 @@
         $apellido = $_POST['apellido'];
         $descripcion = $_POST['descripcion'];
 
-
         $directorio = "/uploads/";
         if(move_uploaded_file($_FILES['file']['tmp_name'], __DIR__ . $directorio . $_FILES['file']['name'])) {
             $imagen_url = $_FILES['file']['name'];

@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/progressbar.css"/>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -52,8 +53,8 @@
                 <span></span>
             </div>
             <nav class="navegacion-principal clearfix">
-                <a href="facultad.php">Conferencia</a>
-                <a href="calendario.php">Calendario</a>
+                <a href="facultad.php" onclick='javascript:window.runProgressBar()'>Conferencia</a>
+                <a href="c_derecho.php" onclick='javascript:window.runProgressBar()'>Calendario</a>
                 <a href="expositores.php">Expositores</a>
                 <a href="registro.php">Reservaciones</a>
             </nav>

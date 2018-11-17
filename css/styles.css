@@ -137,3 +137,22 @@ li:hover > .submenu {
 
 
 
+header {
+  width: 100%;
+  min-height:calc(100vh - 52px);
+}
+
+
+/* To mantain the navbar at the top once it is affixed */
+.affix {
+    top: 0;
+    width: 100%;
+  }
+
+/* Padding for a smoth affix */
+.affix + .container-fluid {
+  padding-top: 72px;
+}
+
+
+
