@@ -39,7 +39,7 @@
         </div>
     </div><!--.contador parallax-->
 
-    <section class="precios seccion">
+    <section class="precios seccion seccion-precios">
         <h2>Precios</h2>
         <div class="contendor">
             <ul class="lista-precios clearfix">
@@ -71,12 +71,12 @@
         </div>
     </section><!--.precios seccion-->
 
-    <div id="mapa" class="mapa">
-
+    <div id ="map" class="mapa seccion"><!--.mapa-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15230.263358146545!2d-66.06419695000001!3d-17.38461225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x151052438057d1f0!2sCampus+Udabol!5e0!3m2!1ses!2sbo!4v1542542746289" width="100%" height="420" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div><!--.mapa-->
-
-    <section class="seccion">
-        <h2>Testimoniales</h2>
+       
+    <section class="seccion seccion-testimonial">
+        <h2 class="title-testimonial">Testimoniales</h2>
         <div class="testimoniales contendor clearfix">
             <div class="testimonial">
                 <blockquote cite="http://example.com/facts">
@@ -113,24 +113,24 @@
         <h2 class="">Convenios</h2>
         <div class="row">
             <div class="col-md-3 col-sm-3 conve">
-                <img src="img/Cambridge.png" alt="logo Cambridge">
+                <a href="https://www.cambridgeenglish.org/" target="_blank"><img src="img/Cambridge.png" alt="logo Cambridge"></a>
             </div>
             <div class="col-md-3 col-sm-3 conve">
-                <img src="img/Mikrotik.png" alt="logo Mikrotik">
+                <a href="https://mikrotik.com/" target="_blank"><img src="img/Mikrotik.png" alt="logo Mikrotik"></a>
             </div>
             <div class="col-md-3 col-sm-3 conve">
-                <img src="img/Observatorio.png" alt="logo Observatorio">
+                <a href="https://www.toinn.org/" target="_blank"><img src="img/Observatorio.png" alt="logo Observatorio"></a>
             </div>
             <div class="col-md-3 col-sm-3 conve">
-                <img src="img/Bureau.png" alt="logo Bureau">
+                <a href="https://group.bureauveritas.com/" target="_blank"><img src="img/Bureau.png" alt="logo Bureau"></a>
             </div>
         </div>
         <div class="row">  
             <div class="col-md-6 col-sm-3 conv">
-                <img src="img/Cisco.png" alt="logo Cisco">
+                <a href="https://www.netacad.com/" target="_blank"><img src="img/Cisco.png" alt="logo Cisco"></a>
             </div>
             <div class="col-md-6 col-sm-3 conv">
-                <img src="img/Toefl.png" alt="logo Toefl">
+                <a href="https://www.netacad.com/" target="_blank"><img src="img/Toefl.png" alt="logo Toefl"></a>
             </div>
         </div>
     </div>

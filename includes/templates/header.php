@@ -67,30 +67,27 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="invitados.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Invitados
+                        Información
                         </a>
                         <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="panel_sistemas.php">Tecnologia</a>
-                            <a class="dropdown-item" href="panel_arquitectura.php">Arquitectura</a>
-                            <a class="dropdown-item" href="panel_derecho.php">Derecho</a>
-                            <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
+                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/ingenieria-de-sistemas-cbba/#1538426850149-9086cd82-fd0a" target="_blank">Ingenieria de Sistemas</a>
+                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/arquitectura-cochabamba/#1514538411946-fe9a23cd-d64b" target="_blank">Arquitectura</a>
+                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/derecho-cochabamba/" target="_blank">Derecho</a>
+                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/medicina-cbba/#1540914591514-72d2058b-6da9" target="_blank">Medicina</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="calendario.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Calendario
+                        Udabol
                         </a>
                         <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="panel_sistemas.php">Tecnologia</a>
-                            <a class="dropdown-item" href="panel_arquitectura.php">Arquitectura</a>
-                            <a class="dropdown-item" href="panel_derecho.php">Derecho</a>
-                            <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
+                            <a class="dropdown-item" href="https://academico.udabol.edu.bo/estudiante/" target="_blank">Sistema estudiantil</a>
                         </div>
                     </li>   
                 </ul> 
             </div>
             <div class="link-cerrar col-md-3 col-sm-12">
-                <a class="nav-link float-right cerrar" href="cerrar.php">Iniciar sesion</a>
+                <a class="nav-link float-right cerrar" href="https://www.udabol.edu.bo/a/solicitud-de-inscripcion/" target="_blank">¡Inscrívete ahora!</a>
             </div> 
         </nav>
     </div>

@@ -52,21 +52,21 @@
     <div class="navbar sticky-top">
         <nav class="navbar-expand-lg navbar-dark container-fluid row">
             <div class="logo col-md-3 col-sm-12" >
-                <a href="admin_area.php"><img src="IMG/logo.png" alt="logo udabol" style="width: 80%; margin-left:30px"></a>
+                <a href="index.php"><img src="IMG/logo.png" alt="logo udabol" style="width: 80%; margin-left:30px"></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse enlace-admin navbar-collapse col-md-6 col-sm-12" id="navbarNavDropdown" style="">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="facultad.php">Conferencias <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="c_medicina.php">Calendario</a>
+                        <a class="nav-link" href="c_medicina.php">Calendario</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="expositores.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Expositores</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="expositores.php">Expositores</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="registro.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

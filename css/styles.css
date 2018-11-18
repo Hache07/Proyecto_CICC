@@ -271,3 +271,67 @@ footer.site-footer {
     background: -webkit-linear-gradient(left, black, #004231);
     opacity: 0.5;
 }
+
+.seccion-precios {
+    width: 100%;
+    max-width: 690px;
+    margin: auto;
+}
+
+/** MODALES **/
+.modalmask {
+    position: fixed;
+    font-family: 'Raleway', sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalmask:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalbox {
+    width: 600px;
+    position: relative;
+    padding: 15px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in; 
+}
+.movedown {
+    margin: 0 auto;
+}
+.movedown P {
+    text-align: justify;
+}
+.modalmask:target .movedown {       
+    margin:10% auto;
+} 
+.close {
+    background-color: #222;
+    color: #fff;;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.close:hover {
+    color:#fff!important;
+}

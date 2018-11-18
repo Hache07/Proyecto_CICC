@@ -30,21 +30,31 @@
 
 <?php include_once 'includes/templates/header.php'; ?>
 
-<section class="admin seccion contendor" >
-<h2>Panel de Sistemas</h2>  
-<div class="alert alerta" role="alert">
-	Bienvenido <?php echo $_SESSION['usuario']; ?>
-	<hr>
-</div>
-<nav>
-    <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
-    <a href="">Registrados</a>|
-    <a href="#invi">Agregar Invitado</a>|
-    <a href="#expo">Agregar Expositor</a>|
-    <a href="#temas">Agregar Tema</a>|
-    <a href="crear_admin.php">Crear Administrador</a>|
-    <a href="cerrar.php">Cerrar sesión</a>|
-</nav>
+    <section class="admin seccion contendor" >
+        <h2>Panel de Sistemas</h2>  
+        <div class="alert alerta" role="alert">
+            Bienvenido <?php echo $_SESSION['usuario']; ?>
+            <hr>
+        </div>
+        <nav>
+            <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
+            <a href="">Registrados</a>|
+            <a href="#modal1">Agregar Invitado</a>|
+            <a href="#expo">Agregar Expositor</a>|
+            <a href="#temas">Agregar Tema</a>|
+            <a href="crear_admin.php">Crear Administrador</a>|
+            <a href="cerrar.php">Cerrar sesión</a>|
+        </nav>
+        <div id="modal1" class="modalmask">
+            <div class="modalbox movedown">
+                <a href="#close" title="Close" class="close">X</a>
+                <h4>Misión y Visión</h4>
+                <h5>Misión</h5>
+                <p>Nuestra misión, educar y formar profesionales con visión empresarial en el área de Sistemas, competitivos en un contexto de exigencia y calidad asumiendo responsabilidad ejecutiva, operativa y directiva, en un ambiente de respeto. Formar ingenieros en sistemas capaces de integrar el conocimiento tecnológico y científico al planteamiento de soluciones técnica y económicamente factibles. Contribuyendo así, a formar profesionales íntegros y creativos con capacidad de asumir los retos tecnológicos e interactuar con distintos tipos de profesionales a fin de realizar labores interdisciplinarias y trabajar acertadamente en equipo.</p>
+                <h5>Visión</h5>
+                <p>Constituirse en una carrera líder en calidad educativa.</p>
+            </div>
+        </div>
 
 
     <?php if(isset($_GET['exitoso'])): ?>
@@ -56,10 +66,10 @@
         <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
     <?php endif;?>
 
-    <div id="invi">
+    <div id="modal1" class="modalmask">
         <h2>Agregar invitado</h2>
         <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
-        <div class="form-invitado col-md-6">
+            <div class="form-invitado col-md-6">
                 <div class="row">
                     <div class="col">
                         <label for="nombre">Nombre: </label>

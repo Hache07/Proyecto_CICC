@@ -130,7 +130,10 @@ body {
     }
 }
 .seccion {
-    padding: 60px 0;
+    padding: 25px 0;
+}
+.title-testimonial {
+    margin-top: 50px;
 }
 .seccion p {
     font-size: 1.2em;
@@ -711,9 +714,6 @@ div.mapa{
 }
 
 /** TESTIMONIALES **/
-div.testimoniales {
-    padding-bottom: 20px;
-}
 div.testimonial {
     padding: 5px;
 }
@@ -781,7 +781,7 @@ div.newletter {
     height: auto;
 }
 div.newletter::before {
-     background-image: url(../img/bg-inscribir.jpg);
+    background-image: url(../img/bg-inscribir.jpg);
     content: '';
 }
 div.newletter .contenido {
