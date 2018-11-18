@@ -279,7 +279,7 @@ footer.site-footer {
 }
 
 /** MODALES **/
-.modalmask {
+.modalmask, .modalmask-b {
     position: fixed;
     font-family: 'Raleway', sans-serif;
     top: 0;
@@ -298,6 +298,10 @@ footer.site-footer {
     opacity:1;
     pointer-events: auto;
 }
+.modalmask-b:target {
+    opacity:1;
+    pointer-events: auto;
+}
 .modalbox {
     width: 600px;
     position: relative;
@@ -308,15 +312,30 @@ footer.site-footer {
     -moz-transition: all 500ms ease-in;
     transition: all 500ms ease-in; 
 }
-.movedown {
-    margin: 0 auto;
+.modalbox-b {
+    width: 600px;
+    position: relative;
+    padding: 15px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in; 
 }
-.movedown P {
+
+.movedown, .movedown-b {
+    margin: 0px auto;
+}
+.movedown P, .movedown-b p {
     text-align: justify;
 }
 .modalmask:target .movedown {       
-    margin:10% auto;
+    margin: 10% auto;
 } 
+/** ADMIN MODAL **/
+.modalmask-b:target .movedown-b {       
+    margin: 30px auto;
+}
 .close {
     background-color: #222;
     color: #fff;;

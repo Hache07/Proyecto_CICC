@@ -40,21 +40,10 @@
             <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
             <a href="">Registrados</a>|
             <a href="#modal1">Agregar Invitado</a>|
-            <a href="#expo">Agregar Expositor</a>|
-            <a href="#temas">Agregar Tema</a>|
+            <a href="#modal2">Agregar Expositor</a>|
+            <a href="#modal3">Agregar Tema</a>|
             <a href="crear_admin.php">Crear Administrador</a>|
-            <a href="cerrar.php">Cerrar sesión</a>|
         </nav>
-        <div id="modal1" class="modalmask">
-            <div class="modalbox movedown">
-                <a href="#close" title="Close" class="close">X</a>
-                <h4>Misión y Visión</h4>
-                <h5>Misión</h5>
-                <p>Nuestra misión, educar y formar profesionales con visión empresarial en el área de Sistemas, competitivos en un contexto de exigencia y calidad asumiendo responsabilidad ejecutiva, operativa y directiva, en un ambiente de respeto. Formar ingenieros en sistemas capaces de integrar el conocimiento tecnológico y científico al planteamiento de soluciones técnica y económicamente factibles. Contribuyendo así, a formar profesionales íntegros y creativos con capacidad de asumir los retos tecnológicos e interactuar con distintos tipos de profesionales a fin de realizar labores interdisciplinarias y trabajar acertadamente en equipo.</p>
-                <h5>Visión</h5>
-                <p>Constituirse en una carrera líder en calidad educativa.</p>
-            </div>
-        </div>
 
 
     <?php if(isset($_GET['exitoso'])): ?>
@@ -66,10 +55,12 @@
         <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
     <?php endif;?>
 
-    <div id="modal1" class="modalmask">
+    <div id="modal1" class="modalmask-b">
+    <div class="modalbox-b movedown-b">
+    <a href="#close" title="Close" class="close">X</a>
         <h2>Agregar invitado</h2>
         <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
-            <div class="form-invitado col-md-6">
+            <div class="form-invitado col-md-12">
                 <div class="row">
                     <div class="col">
                         <label for="nombre">Nombre: </label>
@@ -94,6 +85,7 @@
             </div>
         </form>
     </div>
+    </div>
 </section>
 
 <section class="admin seccion contendor">
@@ -106,10 +98,12 @@
         <?php header( "refresh:3; url=agregar_expositor.php" ); ?>
     <?php endif;?>
 
-    <div id="expo">
+    <div id="modal2" class="modalmask-b">
+    <div class="modalbox-b movedown-b">
+    <a href="#close" title="Close" class="close">X</a>
     <h2>Agregar expositor</h2>
     <form class="invitado" method="POST" action="agregar_expositor.php" enctype="multipart/form-data">
-       <div class="form-invitado col-md-6">
+       <div class="form-invitado col-md-12">
             <div class="row">
                 <div class="col">
                     <label for="nombre">Nombre: </label>
@@ -153,6 +147,7 @@
             <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
         </div>
     </form>
+    </div>
     </div>
 </section>
 
@@ -226,70 +221,73 @@
         <?php   header( "refresh:3; url=agregar_tema.php" ); 
             } ?>
         
-        <div id="temas" style="">
-        <h2>Agregar Tema</h2>
-        <div class="form-invitado col-md-5">
-            <form action="insert_sistemas.php" method="POST">
-                <div class="form-group">
-                    <label for="nombre">Nombre tema:</label>
-                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese el tema a exponer" required>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="fecha">Fecha:</label>
-                        <input type="date" name="fecha" class="form-control" id="fecha" required>
+        <div id="modal3" class="modalmask-b">
+            <div class="modalbox-b movedown-b">
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Agregar Tema</h2>
+            <div class="form-invitado col-md-12">
+                <form action="insert_sistemas.php" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre tema:</label>
+                        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese el tema a exponer" required>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="hora">Hora:</label>
-                        <input type="time" name="hora" class="form-control" id="hora" required>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" name="fecha" class="form-control" id="fecha" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="hora">Hora:</label>
+                            <input type="time" name="hora" class="form-control" id="hora" required>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="form-check">
-                    <label for="categoria">Categoria:</label>
-                    <?php
-                        try {
+                    
+                    <div class="form-check">
+                        <label for="categoria">Categoria:</label>
+                        <?php
+                            try {
 
-                            require_once('includes/funciones/conexion.php');
-                            $sql = "SELECT * FROM `categoria_evento`";
-                            $res = $conexion->query($sql);
-                            while ($cat_eventos = $res->fetch_assoc()) {
-                                echo '<div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="categorias" value='.$cat_eventos['id_categoria'].' required>'." ".$cat_eventos['cat_evento'].'
-                                        </label>
-                                      </div>';
+                                require_once('includes/funciones/conexion.php');
+                                $sql = "SELECT * FROM `categoria_evento`";
+                                $res = $conexion->query($sql);
+                                while ($cat_eventos = $res->fetch_assoc()) {
+                                    echo '<div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="categorias" value='.$cat_eventos['id_categoria'].' required>'." ".$cat_eventos['cat_evento'].'
+                                            </label>
+                                        </div>';
+                                } 
+                            } catch (Exception $e) {
+                                echo "Error:" . $e->getMessage();
+                            }
+                        ?>
+                    </div>
+    
+                    <div class="form-group mt-3">
+                        <label for="invitado">Expositor:</label>
+                        <?php
+                            try {
+                                require_once('includes/funciones/conexion.php');
+                                $sql = "SELECT `id_invitado`, `nombre_invitado`, `apellido_invitado` FROM `invitados` ";
+                                $res_invitados = $conexion->query($sql);
+                                echo "<select class='custom-select' name='invitado'>";
+                                while($invitados = $res_invitados->fetch_assoc()) { 
+                        ?>
+                                    <option value="<?php echo $invitados['id_invitado']; ?>">
+                                        <?php echo $invitados['nombre_invitado'] . " " . $invitados['apellido_invitado']; ?>
+                                    </option>
+                        <?php   }
+                                echo "</select>";
+                            } catch(Exception $e) {
+                                echo "Error: ". $e->getMessage();
                             } 
-                        } catch (Exception $e) {
-                            echo "Error:" . $e->getMessage();
-                        }
-                    ?>
-                </div>
-   
-                <div class="form-group mt-3">
-                    <label for="invitado">Expositor:</label>
-                    <?php
-                        try {
-                            require_once('includes/funciones/conexion.php');
-                            $sql = "SELECT `id_invitado`, `nombre_invitado`, `apellido_invitado` FROM `invitados` ";
-                            $res_invitados = $conexion->query($sql);
-                            echo "<select class='custom-select' name='invitado'>";
-                            while($invitados = $res_invitados->fetch_assoc()) { 
-                    ?>
-                                <option value="<?php echo $invitados['id_invitado']; ?>">
-                                    <?php echo $invitados['nombre_invitado'] . " " . $invitados['apellido_invitado']; ?>
-                                </option>
-                    <?php   }
-                            echo "</select>";
-                        } catch(Exception $e) {
-                            echo "Error: ". $e->getMessage();
-                        } 
-                    ?>
-                </div>
-                <button type="submit" class="btn btn-block button">Registrar</button>
-            </form>
-            <?php $conexion->close(); ?>
-        </div>
+                        ?>
+                    </div>
+                    <button type="submit" class="btn btn-block button">Registrar</button>
+                </form>
+                <?php $conexion->close(); ?>
+            </div>
+                        </div>
         </div>
     </section>
 
