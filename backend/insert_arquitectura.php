@@ -37,7 +37,7 @@
         </div>
         <div class="">
             <nav class="">
-                <a href="panel_arquitectura.php"><i class="fas fa-home"></i> Home</a>
+                <a href="panel_arquitectura.php"><i class="fas fa-home"></i> Home</a>|
                 <a href="">Registrados</a>|
                 <a href="#invi">Agregar Invitado</a>|
                 <a href="#expo">Agregar Expositor</a>|

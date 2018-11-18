@@ -158,23 +158,24 @@ h3 {
     font-family: 'PT Sans', sans-serif;
     margin: 0;
 }
-.button.hollow,
 .button.hollow:hover {
     background-color: white;
-    color: #004231;
+    color: #fff;
+    text-decoration: none;
 }
 .button {
-    background-color: #004231;
-    font-family: 'Oswald', sans-serif;
+    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    color: #fff;
+    color: #004231;
     text-decoration: none;
     padding: 10px 40px;
     font-size: 1em;
     margin-top: 20px;
     display: inline-block;
     transition: all .5s ease;
-    border: 1.5px solid #004231;
+    border: 1px solid #004231;
+    border-radius: 3px;
 }
 ul {
     list-style: none;
@@ -182,8 +183,11 @@ ul {
     padding: 0;
 }
 .button:hover {
-    background-color: #003121;
+    background-color: #003121!important;
     cursor: pointer;
+}
+.btn-front:hover {
+    background-color: #004231;
 }
 .float-right {
     float: right;
@@ -272,6 +276,10 @@ h3.unico {
     font-family: 'Raleway', sans-serif;
     line-height: 2em;
     margin-bottom: 80px;
+    font-weight: 400;
+}
+.conf-container {
+    max-width: 100%!important;
 }
 
 /** HEADER **/
@@ -396,7 +404,7 @@ nav.navegacion-principal a {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.3em;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
     transition: all .3s ease;
     width: 100%;
@@ -661,7 +669,7 @@ div.tabla-precio:hover {
     box-shadow: 2px 2px 50px #666;
 }
 div.tabla-precio ul li {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -682,9 +690,10 @@ div.tabla-precio p.numero {
     margin-top: 15px;
 }
 div.tabla-precio h3 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 /** CONVENIOS **/

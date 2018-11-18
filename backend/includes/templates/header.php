@@ -7,7 +7,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/normalize.css">

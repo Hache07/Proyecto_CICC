@@ -193,7 +193,7 @@ li:hover > .submenu {
 .detalles {
     margin: 0 auto;
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
     text-align: center;
     color: #fff;
     padding-top: 150px;
@@ -203,8 +203,14 @@ li:hover > .submenu {
     font-size: 3em;
     font-weight: 100;
 }
+@media screen and (max-width: 500px) {
+    .detalles h4 {
+        font-size: 1.8em;
+    }
+}
 .detalles p {
     font-size: 1.2em;
+    font-weight: 100;
 }
 .b-admin, .b-admin-2 {
     text-transform: uppercase;
@@ -224,7 +230,44 @@ li:hover > .submenu {
     background-color: #000; 
 }
 
-
+.slogan-video p{
+    font-weight: 100;
+}
 footer.site-footer {
     margin-top: 0;
+}
+
+
+/** SISTEMAS **/
+.container-sistemas, .container-arqui, .container-derecho, .container-medicina {
+    width: 100%;
+    height: 626px; 
+    background-size: 120%;
+    animation: move 8s infinite linear alternate;
+}
+.container-sistemas {
+    background-image: url(https://t3mexico.mx/home/wp-content/uploads/2018/06/ena.jpg);
+}
+.container-arqui {
+    background-image: url(http://a1group.co/wp-content/uploads/2018/09/plano-de-casa-campestre-dise-o-moderno-en-un-piso-245-m2-youtube-casas-campo-modernas-modelos-fotos-fachadas-campestres-hqdefault.jpg);
+}
+.container-derecho {
+    background-image: url(http://www.colabojuj.org.ar/wp-content/uploads/2016/11/balanza2.jpg);
+}
+.container-medicina {
+    background-image: url(https://sites.google.com/site/bionicaysuscampos/_/rsrc/1462257827067/campos-de-aplicacion/bionica-en-el-campo-de-la-medicina/pene_bionico_.jpg);
+}
+@keyframes move {
+    from {
+        background-position: bottom left;
+    } to {
+        background-position: top right;
+    }
+}
+.capa-gradient-a {
+    width: 100%;
+    height: 626px;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #004231);
+    opacity: 0.5;
 }
