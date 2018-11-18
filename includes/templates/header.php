@@ -56,17 +56,17 @@
         </div>
     </div><!--.inicio-->
 
-    <div class="barra">
-        <div class="contendor clearfix sticky-top">
+    <div class="barra sticky-top">
+        <div class="contendor clearfix">
             <div class="logo">
                 <a href="index.php"><img src="img/logo.png" alt="logo udabol"></a>
             </div>
-            <div class="menu-movil">
+            <div class="menu-movil" data-target="#dropdown">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <nav class="navegacion-principal clearfix sticky-top">
+            <nav class="navegacion-principal clearfix" id="dropdown">
                 <a href="facultad.php">Conferencia</a>
                 <a href="calendario.php">Calendario</a>
                 <a href="invitados.php">Invitados</a>

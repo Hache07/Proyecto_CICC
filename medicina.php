@@ -53,7 +53,7 @@
             </div>
             <nav class="navegacion-principal clearfix">
                 <a href="facultad.php">Conferencia</a>
-                <a href="calendario.php">Calendario</a>
+                <a href="c_medicina.php">Calendario</a>
                 <a href="expositores.php">Expositores</a>
                 <a href="registro.php">Reservaciones</a>
             </nav>

@@ -16,10 +16,6 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Acme|Anton|Bree+Serif|Josefin+Sans|Merriweather+Sans" rel="stylesheet">
 
-    <?php
-        $archivo = basename($_SERVER['PHP_SELF']);
-        $pagina = str_replace(".php","", $archivo);
-    ?>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/colorbox.css">
@@ -53,7 +49,7 @@
             </div>
             <nav class="navegacion-principal clearfix">
                 <a href="facultad.php">Conferencia</a>
-                <a href="calendario.php">Calendario</a>
+                <a href="c_sistemas.php">Calendario</a>
                 <a href="expositores.php">Expositores</a>
                 <a href="registro.php">Reservaciones</a>
             </nav>

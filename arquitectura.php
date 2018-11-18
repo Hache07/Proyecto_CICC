@@ -49,7 +49,7 @@
             </div>
             <nav class="navegacion-principal clearfix sticky-top">
                 <a href="facultad.php">Conferencia</a>
-                <a href="calendario.php">Calendario</a>
+                <a href="c_arquitectura.php">Calendario</a>
                 <a href="expositores.php">Expositores</a>
                 <a href="registro.php">Reservaciones</a>
             </nav>

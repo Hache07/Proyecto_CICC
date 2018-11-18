@@ -33,7 +33,7 @@ strong {
     color: #292b2c!important;
 }
 
-/** SCROLLBAR **/
+/** SCROLLBAR 
 body::-webkit-scrollbar {
 	width: 10px;
 }
@@ -41,6 +41,7 @@ body::-webkit-scrollbar-thumb {
 	background-color: #fbbb00; 
 	border-radius: 5px;
 }
+**/
 
 /** SUBIR **/
 .arriba {
@@ -60,7 +61,42 @@ body::-webkit-scrollbar-thumb {
 /** BARRA BACKEND **/
 .navbar {
     padding: 15px 0;
+    background-color: #004231!important;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.navbar-nav a {
+    color: #fff!important;
+    margin: 0 20px 0 0;
+}
+.navbar-nav {
+    margin: 0 auto!important;
+}
+.drop-sub {
     background-color: #004231;
+    border: none;
+}
+.drop-sub a {
+    color: #292b2c;
+    font-weight: 200!important;
+}
+.drop-sub a:hover {
+    background-color: #004231;
+    color: #fbbb00!important;
+}
+.nav-item>a {
+    text-transform: uppercase;
+}
+.link-cerrar a {
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+    padding: 15px;
+}
+.link-cerrar a:hover {
+    background-color: #fbbb00;
+    border: 1px solid #fbbb00;
 }
 .menu {
     display: flex;
@@ -73,31 +109,15 @@ body::-webkit-scrollbar-thumb {
 .menu a:hover {
     text-decoration: none;
 }
-.menu li a {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.3em;
-    font-family: 'Oswald', sans-serif;
-    transition: all .3s ease;
-    padding: 10px 10px;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin: 0 20px 0 0;
-}
 .menu>li:hover {
     background-color: #fbbb00;
     text-decoration: none;
 }
 .submenu {
-    *display: none;
     flex-direction: column!important;
     position: absolute;
-    margin-top: 15px!important;
-    background-color: #fbbb00;
     transform: rotateY(240deg) scale(0);
     transition: all 1s;
-    box-shadow: 1px 1px 10px 0 #292b2c;
 }
 .submenu li a {
     width: 98%;
@@ -113,7 +133,7 @@ li:hover > .submenu {
     height: 0;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
-    border-bottom: 8px solid #fbbb00;
+    border-bottom: 8px solid #004231;
     position: absolute;
     margin-top: -8px;
     margin-left: 15px;
@@ -135,24 +155,76 @@ li:hover > .submenu {
     transform: rotate(-90deg);
 }
 
-
-
-header {
-  width: 100%;
-  min-height:calc(100vh - 52px);
+.sticky-top-admin {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 89px;
+    z-index: 1020;
 }
 
+/** ADMIN AREA **/
 
-/* To mantain the navbar at the top once it is affixed */
-.affix {
-    top: 0;
+.container-portada {
     width: 100%;
-  }
-
-/* Padding for a smoth affix */
-.affix + .container-fluid {
-  padding-top: 72px;
+    height: 505px;
+    background-image: url(https://raw.githubusercontent.com/Magtimus/portada-en-movimiento/master/image/portada.jpg);
+    background-size: 200%;
+    animation: move 10s infinite linear alternate;
+}
+@keyframes move {
+    from {
+        background-position: bottom left;
+    } to {
+        background-position: top right;
+    }
+}
+.capa-gradient {
+    width: 100%;
+    height: 505px;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #004231);
+    opacity: 0.5;
+}
+.container-detalles {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+.detalles {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    padding-top: 150px;
+}
+.detalles h4 {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 100;
+}
+.detalles p {
+    font-size: 1.2em;
+}
+.b-admin, .b-admin-2 {
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 15px 30px;
+    background-color: #000;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 5px; 
+}
+.b-admin-2 {
+    background-color: #fbbb00; 
+    margin-left: 5px;
+}
+.b-admin-2:hover {
+    background-color: #000; 
 }
 
 
-
+footer.site-footer {
+    margin-top: 0;
+}

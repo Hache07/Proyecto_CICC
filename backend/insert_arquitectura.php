@@ -30,44 +30,105 @@
 
 <?php include_once 'includes/templates/header.php'; ?>
 
-<section class="admin seccion contendor" >
-<h2>Panel de arquitectura</h2>
-<div class="alert alerta" role="alert">
-	Bienvenido <?php echo $_SESSION['usuario']; ?>
-	<hr>
-</div>
-<nav class="fixed-top sticky-top">
-    <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
-    <a href="">Registrados</a>|
-    <a href="#invi">Agregar Invitado</a>|
-    <a href="#expo">Agregar Expositor</a>|
-    <a href="#temas">Agregar Tema</a>|
-    <a href="crear_admin.php">Crear Administrador</a>|
-    <a href="cerrar.php">Cerrar sesión</a>|
-</nav>
-
-
-    <?php if(isset($_GET['exitoso'])): ?>
-        <div class="container-fluid">
-            <div class="alert alert-success" role="alert">
-                <strong>El registro se realizo con exito!</strong> 
-            </div>
+    <div class="admin container">
+        <div class="alert alerta" role="alert">
+            Bienvenido <?php echo $_SESSION['usuario']; ?>
+            <hr>
         </div>
-        <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
-    <?php endif;?>
+        <div class="">
+            <nav class="">
+                <a href="panel_arquitectura.php"><i class="fas fa-home"></i> Home</a>
+                <a href="">Registrados</a>|
+                <a href="#invi">Agregar Invitado</a>|
+                <a href="#expo">Agregar Expositor</a>|
+                <a href="#temas">Agregar Tema</a>|
+                <a href="crear_admin.php">Crear Administrador</a>|
+            </nav>
+        </div>
+    </div>
 
-    <div id="invi">
-        <h2>Agregar invitado</h2>
-        <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
+    <section class="admin seccion contendor" >
+        <?php if(isset($_GET['exitoso'])): ?>
+            <div class="container-fluid">
+                <div class="alert alert-success" role="alert">
+                    <strong>El registro se realizo con exito!</strong> 
+                </div>
+            </div>
+            <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
+        <?php endif;?>
+
+        <div id="invi">
+            <h2>Agregar invitado</h2>
+            <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
+            <div class="form-invitado col-md-6">
+                    <div class="row">
+                        <div class="col">
+                            <label for="nombre">Nombre: </label>
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="col">
+                            <label for="apellido">Apellido: </label>
+                            <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción: </label>
+                        <textarea class="form-control" class="descripcion" name="descripcion" id="descripcion" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group row">
+                        <label for="imagen" class="col-sm-2 col-form-label">Imagen: </label>
+                        <div class="col-sm-10">            
+                            <input type="file" class="form-control" class="imagen" name="file" id="imagen" required>
+                        </div>
+                    </div>
+                    <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="admin seccion contendor">
+        <?php if(isset($_GET['exitoso'])): ?>
+            <div class="container-fluid">
+                <div class="alert alert-success" role="alert">
+                    <strong>El registro se realizo con exito!</strong> 
+                </div>
+            </div>
+            <?php header( "refresh:3; url=agregar_expositor.php" ); ?>
+        <?php endif;?>
+
+        <div id="expo">
+        <h2>Agregar expositor</h2>
+        <form class="invitado" method="POST" action="agregar_expositor.php" enctype="multipart/form-data">
         <div class="form-invitado col-md-6">
                 <div class="row">
                     <div class="col">
                         <label for="nombre">Nombre: </label>
-                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="" required>
                     </div>
                     <div class="col">
                         <label for="apellido">Apellido: </label>
-                        <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                        <input type="text" name="apellido" id="apellido" class="form-control" placeholder="" required>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col col-md-5">
+                        <label for="nombre">Nacionalidad: </label>
+                        <input type="text" name="nacionalidad" id="nombre" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="col col-md-7">
+                        <label for="apellido">Empresa: </label>
+                        <input type="text" name="empresa" id="apellido" class="form-control" placeholder="" required>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col col-md-7">
+                        <label for="nombre">Correo: </label>
+                        <input type="email" name="correo" id="nombre" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="col col-md-5">
+                        <label for="apellido">Telefono: </label>
+                        <input type="text" name="telefono" id="apellido" class="form-control" placeholder="" required>
                     </div>
                 </div><br>
                 <div class="form-group">
@@ -83,128 +144,65 @@
                 <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
             </div>
         </form>
-    </div>
-</section>
-
-<section class="admin seccion contendor">
-    <?php if(isset($_GET['exitoso'])): ?>
-        <div class="container-fluid">
-            <div class="alert alert-success" role="alert">
-                <strong>El registro se realizo con exito!</strong> 
-            </div>
         </div>
-        <?php header( "refresh:3; url=agregar_expositor.php" ); ?>
-    <?php endif;?>
+    </section>
 
-    <div id="expo">
-    <h2>Agregar expositor</h2>
-    <form class="invitado" method="POST" action="agregar_expositor.php" enctype="multipart/form-data">
-       <div class="form-invitado col-md-6">
-            <div class="row">
-                <div class="col">
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="" required>
-                </div>
-                <div class="col">
-                    <label for="apellido">Apellido: </label>
-                    <input type="text" name="apellido" id="apellido" class="form-control" placeholder="" required>
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col col-md-5">
-                    <label for="nombre">Nacionalidad: </label>
-                    <input type="text" name="nacionalidad" id="nombre" class="form-control" placeholder="" required>
-                </div>
-                <div class="col col-md-7">
-                    <label for="apellido">Empresa: </label>
-                    <input type="text" name="empresa" id="apellido" class="form-control" placeholder="" required>
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col col-md-7">
-                    <label for="nombre">Correo: </label>
-                    <input type="email" name="correo" id="nombre" class="form-control" placeholder="" required>
-                </div>
-                <div class="col col-md-5">
-                    <label for="apellido">Telefono: </label>
-                    <input type="text" name="telefono" id="apellido" class="form-control" placeholder="" required>
-                </div>
-            </div><br>
-            <div class="form-group">
-                <label for="descripcion">Descripción: </label>
-                <textarea class="form-control" class="descripcion" name="descripcion" id="descripcion" rows="3" required></textarea>
-            </div>
-            <div class="form-group row">
-                <label for="imagen" class="col-sm-2 col-form-label">Imagen: </label>
-                <div class="col-sm-10">            
-                    <input type="file" class="form-control" class="imagen" name="file" id="imagen" required>
-                </div>
-            </div>
-            <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
-        </div>
-    </form>
-    </div>
-</section>
+    <?php
+        include_once 'includes/funciones/funciones.php';
 
-
-
-
-<?php
-    include_once 'includes/funciones/funciones.php';
-
-    if(isset($_POST['submit'])) {
-        $nombre = $_POST['nombre'];
-        $apellido = $_POST['apellido'];
-        $nacionalidad = $_POST['nacionalidad'];
-        $correo = $_POST['correo'];
-        $telefono = $_POST['telefono'];
-        $empresa = $_POST['empresa'];
-        $descripcion = $_POST['descripcion'];
-        $directorio = "/uploads/";
-        if(move_uploaded_file($_FILES['file']['tmp_name'], __DIR__ . $directorio . $_FILES['file']['name'])) {
-            $imagen_url = $_FILES['file']['name'];
-            $resultado = "Registro exitoso";
-            try {
-                require_once('includes/funciones/conexion.php');
-                $stmt = $conexion->prepare("INSERT INTO expositores (nombre_expositor, apellido_expositor, nacionalidad, correo, telefono, empresa, descripcion, url_imagen) VALUES (?,?,?,?,?,?,?,?)");
-                $stmt->bind_param("ssssssss", $nombre, $apellido, $nacionalidad, $correo, $telefono, $empresa, $descripcion, $imagen_url);
-                $stmt->execute();
-                $stmt->close();
-                $conexion->close();
-                header('Location:agregar_expositor.php?exitoso=1');
-            } catch(Exception $e) {
-                echo "Error: ". $e->getMessage();
+        if(isset($_POST['submit'])) {
+            $nombre = $_POST['nombre'];
+            $apellido = $_POST['apellido'];
+            $nacionalidad = $_POST['nacionalidad'];
+            $correo = $_POST['correo'];
+            $telefono = $_POST['telefono'];
+            $empresa = $_POST['empresa'];
+            $descripcion = $_POST['descripcion'];
+            $directorio = "/uploads/";
+            if(move_uploaded_file($_FILES['file']['tmp_name'], __DIR__ . $directorio . $_FILES['file']['name'])) {
+                $imagen_url = $_FILES['file']['name'];
+                $resultado = "Registro exitoso";
+                try {
+                    require_once('includes/funciones/conexion.php');
+                    $stmt = $conexion->prepare("INSERT INTO expositores (nombre_expositor, apellido_expositor, nacionalidad, correo, telefono, empresa, descripcion, url_imagen) VALUES (?,?,?,?,?,?,?,?)");
+                    $stmt->bind_param("ssssssss", $nombre, $apellido, $nacionalidad, $correo, $telefono, $empresa, $descripcion, $imagen_url);
+                    $stmt->execute();
+                    $stmt->close();
+                    $conexion->close();
+                    header('Location:agregar_expositor.php?exitoso=1');
+                } catch(Exception $e) {
+                    echo "Error: ". $e->getMessage();
+                }
             }
         }
-    }
 
- /*   $nombre = $_POST['nombre'];
-    $fecha = $_POST['fecha'];
-    $hora = $_POST['hora'];
-    $id_cat = $_POST['categorias'];
-    $id_invitado = $_POST['invitado'];
-*/
-    try {
-        require_once('includes/funciones/conexion.php');
-        $stmt = $conexion->prepare("SELECT cat_evento, COUNT(DISTINCT nombre_evento) FROM eventos INNER JOIN categoria_evento ON eventos.id_cat_evento=categoria_evento.id_categoria WHERE id_cat_evento = ? ");
-        $stmt->bind_param("s", $id_cat);
-        $stmt->execute();
-        $stmt->bind_result($cat_evento, $total);
-        $stmt->store_result();
-        $sql = "INSERT INTO `eventos` (nombre_evento, fecha_evento, hora_evento, id_cat_evento, id_inv, clave) VALUES (?,?,?,?,?,?)";
-        $stmt_two = $conexion->prepare($sql);
-        $stmt->fetch();
-        (int) $total = $total;
-        $total++;
-        $clave = strtolower(substr($cat_evento, 0, 5))."_".$total;
-        $stmt_two->bind_param("ssssss", $nombre, $fecha, $hora, $id_cat, $id_invitado, $clave);
-        $stmt_two->execute();
-        $stmt_two->close();
-        $stmt->close(); 
-    } catch(Exception $e) {
-        echo "Error: ". $e->getMessage();
-    } 
-?>
+    /*   $nombre = $_POST['nombre'];
+        $fecha = $_POST['fecha'];
+        $hora = $_POST['hora'];
+        $id_cat = $_POST['categorias'];
+        $id_invitado = $_POST['invitado'];
+    */
+        try {
+            require_once('includes/funciones/conexion.php');
+            $stmt = $conexion->prepare("SELECT cat_evento, COUNT(DISTINCT nombre_evento) FROM eventos INNER JOIN categoria_evento ON eventos.id_cat_evento=categoria_evento.id_categoria WHERE id_cat_evento = ? ");
+            $stmt->bind_param("s", $id_cat);
+            $stmt->execute();
+            $stmt->bind_result($cat_evento, $total);
+            $stmt->store_result();
+            $sql = "INSERT INTO `eventos` (nombre_evento, fecha_evento, hora_evento, id_cat_evento, id_inv, clave) VALUES (?,?,?,?,?,?)";
+            $stmt_two = $conexion->prepare($sql);
+            $stmt->fetch();
+            (int) $total = $total;
+            $total++;
+            $clave = strtolower(substr($cat_evento, 0, 5))."_".$total;
+            $stmt_two->bind_param("ssssss", $nombre, $fecha, $hora, $id_cat, $id_invitado, $clave);
+            $stmt_two->execute();
+            $stmt_two->close();
+            $stmt->close(); 
+        } catch(Exception $e) {
+            echo "Error: ". $e->getMessage();
+        } 
+    ?>
     <section class="admin seccion contendor">
         <?php 
             if(isset($_GET['exitoso'])) { ?>      
@@ -283,10 +281,4 @@
         </div>
     </section>
 
-
-<?php include_once 'includes/templates/footer.php'; ?>
-
-<script>
-function mostrar(){
-document.getElementById('exp').style.display = 'block';}
-</script>
+    <?php include_once 'includes/templates/footer.php'; ?>

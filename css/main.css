@@ -345,7 +345,7 @@ h1.nombre-sitio {
 }
 .ini {
     background-color: #fbbb00;
-    padding: 5px 0;    
+    padding: 5px 0;   
 }
 
 /** INICIO-HEADER **/
@@ -356,10 +356,7 @@ div.inicio {
 .plena {
     padding-left: 40px!important;
     color: #888888;
-    font-size: 12px!important;
-}
-nav.redes {
-    text-align: right;
+    font-size: 13px!important;
 }
 nav.redes a {
     color: #004231;
@@ -931,22 +928,22 @@ div.mensaje.error {
 }
 
 /** ADMIN **/
-section.admin nav {
+.admin nav {
     padding: 20px;
     background-color: #fbbb00;
     color: #004231;
     margin-bottom: 30px;
     padding-top: 0;
 }
-section.admin nav a {
+.admin nav a {
     color: #fff;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1em;
     padding: 3px 10px;
     text-decoration: none;
 }
-section.admin nav a:hover {
+.admin nav a:hover {
     border-bottom: 4px solid #004231;
 }
 
