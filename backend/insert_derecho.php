@@ -39,9 +39,9 @@
 <nav class="sticky-top">
     <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
     <a href="">Registrados</a>|
-    <a href="#invi">Agregar Invitado</a>|
-    <a href="#expo">Agregar Expositor</a>|
-    <a href="#temas">Agregar Tema</a>|
+    <a href="#modal1">Agregar Invitado</a>|
+    <a href="#modal2">Agregar Expositor</a>|
+    <a href="#modal3">Agregar Tema</a>|
     <a href="crear_admin.php">Crear Administrador</a>|
     <a href="cerrar.php">Cerrar sesión</a>|
 </nav>
@@ -56,10 +56,12 @@
         <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
     <?php endif;?>
 
-    <div id="invi">
+    <div id="modal1" class="modalmask-b">
+        <div class="modalbox-b movedown-b">
+        <a href="#close" title="Close" class="close">X</a>
         <h2>Agregar invitado</h2>
         <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
-        <div class="form-invitado col-md-6">
+        <div class="form-invitado col-md-12">
                 <div class="row">
                     <div class="col">
                         <label for="nombre">Nombre: </label>
@@ -83,6 +85,7 @@
                 <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
             </div>
         </form>
+</div>
     </div>
 </section>
 
@@ -96,10 +99,12 @@
         <?php header( "refresh:3; url=agregar_expositor.php" ); ?>
     <?php endif;?>
 
-    <div id="expo">
+    <div id="modal2" class="modalmask-b">
+            <div class="modalbox-b movedown-b">
+            <a href="#close" title="Close" class="close">X</a>
     <h2>Agregar expositor</h2>
     <form class="invitado" method="POST" action="agregar_expositor.php" enctype="multipart/form-data">
-       <div class="form-invitado col-md-6">
+       <div class="form-invitado col-md-12">
             <div class="row">
                 <div class="col">
                     <label for="nombre">Nombre: </label>
@@ -143,6 +148,7 @@
             <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
         </div>
     </form>
+</div>
     </div>
 </section>
 
@@ -177,12 +183,12 @@
             }
         }
     }
-
-    $nombre = $_POST['nombre'];
+ /*   $nombre = $_POST['nombre'];
     $fecha = $_POST['fecha'];
     $hora = $_POST['hora'];
     $id_cat = $_POST['categorias'];
     $id_invitado = $_POST['invitado'];
+*/
     try {
         require_once('includes/funciones/conexion.php');
         $stmt = $conexion->prepare("SELECT cat_evento, COUNT(DISTINCT nombre_evento) FROM t_derecho INNER JOIN categoria_evento ON t_derecho.id_cat_evento=categoria_evento.id_categoria WHERE id_cat_evento = ? ");
@@ -215,9 +221,11 @@
         <?php   header( "refresh:3; url=agregar_tema.php" ); 
             } ?>
         
-        <div id="temas" style="">
+        <div id="modal3" class="modalmask-b">
+            <div class="modalbox-b movedown-b">
+            <a href="#close" title="Close" class="close">X</a>
         <h2>Agregar Tema</h2>
-        <div class="form-invitado col-md-5">
+        <div class="form-invitado col-md-12">
             <form action="insert_derecho.php" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre tema:</label>
@@ -279,6 +287,7 @@
             </form>
             <?php $conexion->close(); ?>
         </div>
+                    </div>
         </div>
     </section>
 

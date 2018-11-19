@@ -39,9 +39,9 @@
 <nav>
     <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
     <a href="">Registrados</a>|
-    <a href="#invi">Agregar Invitado</a>|
-    <a href="#expo">Agregar Expositor</a>|
-    <a href="#temas">Agregar Tema</a>|
+    <a href="#modal1">Agregar Invitado</a>|
+    <a href="#modal2">Agregar Expositor</a>|
+    <a href="#modal3">Agregar Tema</a>|
     <a href="crear_admin.php">Crear Administrador</a>|
     <a href="cerrar.php">Cerrar sesión</a>|
 </nav>
@@ -56,33 +56,37 @@
         <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
     <?php endif;?>
 
-    <div id="invi">
-        <h2>Agregar invitado</h2>
-        <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
-        <div class="form-invitado col-md-6">
-                <div class="row">
-                    <div class="col">
-                        <label for="nombre">Nombre: </label>
-                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+    
+    <div id="modal1" class="modalmask-b">
+        <div class="modalbox-b movedown-b">
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Agregar invitado</h2>
+            <form class="invitado" method="POST" action="agregar_invitado.php" enctype="multipart/form-data">
+                <div class="form-invitado col-md-12">
+                    <div class="row">
+                        <div class="col">
+                            <label for="nombre">Nombre: </label>
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="col">
+                            <label for="apellido">Apellido: </label>
+                            <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción: </label>
+                        <textarea class="form-control" class="descripcion" name="descripcion" id="descripcion" rows="3" required></textarea>
                     </div>
-                    <div class="col">
-                        <label for="apellido">Apellido: </label>
-                        <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                    <div class="form-group row">
+                        <label for="imagen" class="col-sm-2 col-form-label">Imagen: </label>
+                        <div class="col-sm-10">            
+                            <input type="file" class="form-control" class="imagen" name="file" id="imagen" required>
+                        </div>
                     </div>
-                </div><br>
-                <div class="form-group">
-                    <label for="descripcion">Descripción: </label>
-                    <textarea class="form-control" class="descripcion" name="descripcion" id="descripcion" rows="3" required></textarea>
+                    <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
                 </div>
-                <div class="form-group row">
-                    <label for="imagen" class="col-sm-2 col-form-label">Imagen: </label>
-                    <div class="col-sm-10">            
-                        <input type="file" class="form-control" class="imagen" name="file" id="imagen" required>
-                    </div>
-                </div>
-                <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </section>
 
@@ -96,10 +100,12 @@
         <?php header( "refresh:3; url=agregar_expositor.php" ); ?>
     <?php endif;?>
 
-    <div id="expo">
+    <div id="modal2" class="modalmask-b">
+    <div class="modalbox-b movedown-b">
+    <a href="#close" title="Close" class="close">X</a>
     <h2>Agregar expositor</h2>
     <form class="invitado" method="POST" action="agregar_expositor.php" enctype="multipart/form-data">
-       <div class="form-invitado col-md-6">
+       <div class="form-invitado col-md-12">
             <div class="row">
                 <div class="col">
                     <label for="nombre">Nombre: </label>
@@ -143,6 +149,7 @@
             <button type="submit" name="submit" class="btn button btn-block" id="alerta">Agregar</button>
         </div>
     </form>
+    </div>
     </div>
 </section>
 
@@ -216,9 +223,12 @@
         <?php   header( "refresh:3; url=agregar_tema.php" ); 
             } ?>
         
-        <div id="temas" style="">
+        
+        <div id="modal3" class="modalmask-b">
+        <div class="modalbox-b movedown-b">
+        <a href="#close" title="Close" class="close">X</a>
         <h2>Agregar Tema</h2>
-        <div class="form-invitado col-md-5">
+        <div class="form-invitado col-md-12">
             <form action="agregar_tema.php" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre tema:</label>
@@ -279,6 +289,7 @@
                 <button type="submit" class="btn btn-block button">Registrar</button>
             </form>
             <?php $conexion->close(); ?>
+        </div>
         </div>
         </div>
     </section>

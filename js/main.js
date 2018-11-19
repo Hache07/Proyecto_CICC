@@ -27,3 +27,10 @@ function CargaScript() {
 }
  
 window.onload = CargaScript;*/
+
+$(function(){
+    $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6}, 1200);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({ number: 18}, 1200);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({ number: 3}, 1200);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 2}, 1200);
+});
