@@ -59,25 +59,17 @@
             </button>
             <div class="collapse enlace-admin navbar-collapse col-md-6 col-sm-12" id="navbarNavDropdown" style="">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="facultad.php">Conferencias <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="c_derecho.php">Calendario</a>
+                        <a class="nav-link" href="c_derecho.php">Calendario</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="expositores.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Expositores</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="expositores.php">Expositores</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="registro.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Reservaciones
-                        </a>
-                        <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="panel_sistemas.php">Tecnologia</a>
-                            <a class="dropdown-item" href="panel_arquitectura.php">Arquitectura</a>
-                            <a class="dropdown-item" href="panel_derecho.php">Derecho</a>
-                            <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.php">Galeria</a>
                     </li>   
                 </ul> 
             </div>

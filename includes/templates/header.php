@@ -49,7 +49,7 @@
             </div>
         </div>
     </div><!--.ini-->
-    <div class="navbar sticky-top">
+    <div class="navbar barra-p fixed sticky-top">
         <nav class="navbar-expand-lg navbar-dark container-fluid row">
             <div class="logo col-md-3 col-sm-12" >
                 <a href="admin_area.php"><img src="IMG/logo.png" alt="logo udabol" style="width: 80%; margin-left:30px"></a>

@@ -13,11 +13,11 @@
     </div>
     <nav>
         <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
-        <a href="registrados.php">Registrados</a>|
-        <a href="insert_sistemas.php">Agregar Invitado</a>|
-        <a href="insert_sistemas.php">Agregar Expositor</a>|
-        <a href="insert_sistemas.php">Agregar Tema</a>|
-        <a href="insert_sistemas.php">Crear Administrador</a>|
+        <a href="registrados.php"> Ver registrados</a>|
+        <a href="v_invitados.php">Ver invitados</a>|
+        <a href="v_expositores.php">Ver expositores</a>|
+        <a href="v_temas.php">Ver temas</a>|
+        <a href="crear_admin.php">Crear Administrador</a>
     </nav>
 </section>
 

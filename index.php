@@ -14,7 +14,7 @@
                     <p><i class="fas fa-book"></i></p>
                 </div>
                 <p class="number" id="number-f"></p>
-                <p>Facultades</p>
+                <p>Carreras</p>
             </div>
             <div class="col-md-4 col-sm-12 count">
                 <div>

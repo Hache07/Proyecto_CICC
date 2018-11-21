@@ -9,6 +9,7 @@
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/jquery.scrollUp.js"></script>
+    <script src="js/lightbox.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Scripts propios -->

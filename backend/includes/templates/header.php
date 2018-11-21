@@ -59,10 +59,10 @@
                         Carreras
                         </a>
                         <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="panel_sistemas.php">Tecnologia</a>
-                            <a class="dropdown-item" href="panel_arquitectura.php">Arquitectura</a>
-                            <a class="dropdown-item" href="panel_derecho.php">Derecho</a>
-                            <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
+                            <a class="dropdown-item" href="insert_sistemas.php">Tecnologia</a>
+                            <a class="dropdown-item" href="insert_arquitectura.php">Arquitectura</a>
+                            <a class="dropdown-item" href="insert_derecho.php">Derecho</a>
+                            <a class="dropdown-item" href="insert_medicina.php">Medicina</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

@@ -356,7 +356,11 @@ h1.nombre-sitio {
 }
 .ini {
     background-color: #fbbb00;
-    padding: 5px 0;   
+    padding: 5px 0;
+}
+.fotos-conf a {
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 /** INICIO-HEADER **/
@@ -398,7 +402,13 @@ div.logo img {
         width: 33%;
     }
 }
-
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
 /** NAVEGACION PRINCIPAL **/
 nav.navegacion-principal {
     display: none;

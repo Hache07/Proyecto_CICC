@@ -9,10 +9,6 @@
     background-color: #dedede;
 
 }
-.row-ini {
-    margin-left: 50px!important;
-    margin-top: 80px;
-}
 .seleccion {
     margin-top: 80px;
     font-family: 'Raleway', sans-serif;
@@ -353,4 +349,9 @@ footer.site-footer {
 }
 .close:hover {
     color:#fff!important;
+}
+
+/** GALERIA **/
+.nave-p .activo {
+    border-bottom: 2px solid #fbbb00;
 }

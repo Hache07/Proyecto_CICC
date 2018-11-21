@@ -30,12 +30,15 @@
 
 <?php include_once 'includes/templates/header.php'; ?>
 
-    <div class="admin container">
-        <div class="alert alerta" role="alert">
-            Bienvenido <?php echo $_SESSION['usuario']; ?>
-            <hr>
-        </div>
-        <div class="">
+
+
+    <section class="admin seccion contendor" >
+    <h2>Panel de Arquitectura</h2>  
+<div class="alert alerta" role="alert">
+	Bienvenido <?php echo $_SESSION['usuario']; ?>
+	<hr>
+</div>
+
             <nav class="">
                 <a href="panel_arquitectura.php"><i class="fas fa-home"></i> Home</a>|
                 <a href="">Registrados</a>|
@@ -44,10 +47,7 @@
                 <a href="#modal3">Agregar Tema</a>|
                 <a href="crear_admin.php">Crear Administrador</a>|
             </nav>
-        </div>
-    </div>
 
-    <section class="admin seccion contendor" >
         <?php if(isset($_GET['exitoso'])): ?>
             <div class="container-fluid">
                 <div class="alert alert-success" role="alert">

@@ -8,7 +8,7 @@
             $fecha = $_POST['fecha'];
             $hora = $_POST['hora'];
             $id_cat = $_POST['categorias'];
-            $id_invitado = $_POST['invitado'];
+            $id_invitado = $_POST['expositor'];
 
             try {
                 require_once('includes/funciones/conexion.php');
@@ -90,13 +90,13 @@
                     <?php
                         try {
                             require_once('includes/funciones/conexion.php');
-                            $sql = "SELECT `id_invitado`, `nombre_invitado`, `apellido_invitado` FROM `invitados` ";
+                            $sql = "SELECT `id_expositor`, `nombre_expositor`, `apellido_expositor` FROM `expositores` ";
                             $res_invitados = $conexion->query($sql);
-                            echo "<select class='custom-select' name='invitado'>";
+                            echo "<select class='custom-select' name='expositor'>";
                             while($invitados = $res_invitados->fetch_assoc()) { 
                     ?>
-                                <option value="<?php echo $invitados['id_invitado']; ?>">
-                                    <?php echo $invitados['nombre_invitado'] . " " . $invitados['apellido_invitado']; ?>
+                                <option value="<?php echo $invitados['id_expositor']; ?>">
+                                    <?php echo $invitados['nombre_expositor'] . " " . $invitados['apellido_expositor']; ?>
                                 </option>
                     <?php   }
                             echo "</select>";

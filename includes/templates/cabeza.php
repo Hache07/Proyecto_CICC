@@ -18,7 +18,18 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/progressbar.css"/>
+    <link rel="stylesheet" href="css/progressbar.css">
+    <link rel="stylesheet" href="css/lightbox.css"/>
+
+    <?php
+        $archivo = basename($_SERVER['PHP_SELF']);
+        $pagina = str_replace(".php", "", $archivo);
+        if($pagina == 'invitados' || $pagina == 'index') {
+            echo '<link rel="stylesheet" href="css/colorbox.css">';
+        } else if($pagina == 'galeria') {
+            echo '<link rel="stylesheet" href="css/lightbox.css">';
+        }
+    ?>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -31,4 +42,4 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body class="<?php echo $pagina; ?>">

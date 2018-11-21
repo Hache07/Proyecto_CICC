@@ -31,7 +31,7 @@
 <?php include_once 'includes/templates/header.php'; ?>
 
     <section class="admin seccion contendor" >
-        <h2>Panel de Sistemas</h2>  
+        <h2>Panel de Tecnologia</h2>  
         <div class="alert alerta" role="alert">
             Bienvenido <?php echo $_SESSION['usuario']; ?>
             <hr>

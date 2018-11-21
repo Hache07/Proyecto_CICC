@@ -43,7 +43,6 @@
     <a href="#modal2">Agregar Expositor</a>|
     <a href="#modal3">Agregar Tema</a>|
     <a href="crear_admin.php">Crear Administrador</a>|
-    <a href="cerrar.php">Cerrar sesión</a>|
 </nav>
 
 

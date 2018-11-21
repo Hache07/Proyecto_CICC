@@ -1,37 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>XXI Congreso - UDABOL</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Acme|Anton|Bree+Serif|Josefin+Sans|Merriweather+Sans" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fontawesome-all.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/colorbox.css">
-    <link rel="stylesheet" href="css/registro.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/progressbar.css"/>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-</head>
-<body>
+<?php include_once 'includes/templates/cabeza.php'; ?>
 
     <span class="arriba fas fa-angle-up"></span>
     <div class="ini">        
@@ -69,15 +36,7 @@
                         <a class="nav-link" href="expositores.php">Expositores</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="registro.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Reservaciones
-                        </a>
-                        <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="panel_sistemas.php">Tecnologia</a>
-                            <a class="dropdown-item" href="panel_arquitectura.php">Arquitectura</a>
-                            <a class="dropdown-item" href="panel_derecho.php">Derecho</a>
-                            <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
-                        </div>
+                        <a class="nav-link" href="galeria.php">Galeria</a>
                     </li>   
                 </ul> 
             </div>

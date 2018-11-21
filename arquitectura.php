@@ -69,15 +69,7 @@
                         <a class="nav-link" href="expositores.php">Expositores</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="registro.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Reservaciones
-                        </a>
-                        <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="panel_sistemas.php">Tecnologia</a>
-                            <a class="dropdown-item" href="panel_arquitectura.php">Arquitectura</a>
-                            <a class="dropdown-item" href="panel_derecho.php">Derecho</a>
-                            <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
-                        </div>
+                        <a class="nav-link" href="galeria.php">Galeria</a>
                     </li>   
                 </ul> 
             </div>

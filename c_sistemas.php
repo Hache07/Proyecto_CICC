@@ -63,7 +63,7 @@
                         </p>
                         <p>
                             <i class="fa fa-user" aria-hidden="true"></i>
-                            <a href=""><?php echo $dataEventos['nombre_invitado']. " ".$dataEventos['apellido_invitado']; ?></a> <?php //echo $evento['nombre_invitado']. " ".$evento['apellido_invitado']; ?> 
+                            <a href="expositores.php"><?php echo $dataEventos['nombre_invitado']. " ".$dataEventos['apellido_invitado']; ?></a> <?php //echo $evento['nombre_invitado']. " ".$evento['apellido_invitado']; ?> 
                         </p>      
                     </div>
         <?php

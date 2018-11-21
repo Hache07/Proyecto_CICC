@@ -19,6 +19,17 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/progressbar.css"/>
+    <link rel="stylesheet" href="css/lightbox.css"/>
+
+    <?php
+        $archivo = basename($_SERVER['PHP_SELF']);
+        $pagina = str_replace(".php", "", $archivo);
+        if($pagina == 'invitados' || $pagina == 'index') {
+            echo '<link rel="stylesheet" href="css/colorbox.css">';
+        } else if($pagina == 'fotos') {
+            echo '<link rel="stylesheet" href="css/lightbox.css">';
+        }
+    ?>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -31,7 +42,7 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body class="<?php echo $pagina; ?>">
 
     <span class="arriba fas fa-angle-up"></span>
     <div class="ini">        
@@ -50,7 +61,7 @@
         </div>
     </div><!--.ini-->
     <div class="navbar sticky-top">
-        <nav class="navbar-expand-lg navbar-dark container-fluid row">
+        <nav class="navbar-expand-lg navbar-dark container-fluid row nave-p">
             <div class="logo col-md-3 col-sm-12" >
                 <a href="index.php"><img src="img/logo.png" alt="logo udabol" style="width: 80%; margin-left:30px"></a>
             </div>
@@ -59,26 +70,18 @@
             </button>
             <div class="collapse enlace-admin navbar-collapse col-md-6 col-sm-12" id="navbarNavDropdown" style="">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="facultad.php">Conferencias <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="registro.php">Reservaciones</a>
+                        <a class="nav-link" href="c_sistemas.php">Calendario</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="expositores.php" >Expositores</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="expositores.php">Expositores</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="calendario.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Calendario
-                        </a>
-                        <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="panel_sistemas.php">Tecnologia</a>
-                            <a class="dropdown-item" href="panel_arquitectura.php">Arquitectura</a>
-                            <a class="dropdown-item" href="panel_derecho.php">Derecho</a>
-                            <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
-                        </div>
-                    </li>   
+                    <li class="nav-item">
+                        <a class="nav-link" href="fotos.php">Galeria</a>
+                    </li>  
                 </ul> 
             </div>
             <div class="link-cerrar col-md-3 col-sm-12">
