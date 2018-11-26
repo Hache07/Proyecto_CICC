@@ -355,3 +355,8 @@ footer.site-footer {
 .nave-p .activo {
     border-bottom: 2px solid #fbbb00;
 }
+
+.row-carreras {
+    margin-left: 60px;
+    margin-top: 90px;
+}

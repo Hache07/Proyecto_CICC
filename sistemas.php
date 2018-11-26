@@ -36,7 +36,7 @@
                         <a class="nav-link" href="expositores.php">Expositores</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="galeria.php">Galeria</a>
+                        <a class="nav-link" href="fotos.php">Galeria</a>
                     </li>   
                 </ul> 
             </div>

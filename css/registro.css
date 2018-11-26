@@ -28,10 +28,10 @@ p.bold {
 form.registro h3 {
     text-align: center;
     text-transform: uppercase;
-    margin: 20px 0 0 0;
+    margin: 20px 0;
 }
-form.registro label.bold {
-	margin-bottom: 20px;
+form.registro label {
+	margin-bottom: 5px;
 	font-weight: bold;
 }
 label.ralew {
@@ -56,11 +56,11 @@ div.paquetes .tabla-precio:hover {
     transform: none;
     box-shadow: none;
 }
-div.caja {
+.caja {
 	background-color: #fff;
 	border: 1px solid #e1e1e1;
-	padding: 10px;
-	margin: 10px;
+	*padding: 10px;
+	*margin: 10px;
 }
 div.campo {
 	padding: 20px;
@@ -85,6 +85,9 @@ div.paquetes .tabla-precio input {
 	padding: 10px 20px;
 	display: none;
 }
+.calendar-none {
+	display: none;
+}
 @media only screen and (min-width: 768px) {
 	.contenido-dia>div {
 		float: left;
@@ -105,7 +108,7 @@ div.paquetes .tabla-precio input {
 	margin-right: 10px;
 }
 .contenido-dia>div label time {
-	color: #fe4918;
+	color: #008000;
 	font-weight: bold;
 }
 
@@ -136,22 +139,28 @@ div.resumen input {
 	margin: 10px auto;
 }
 #lista-productos {
-	background-color: rgb(254, 73, 24);
-	border-radius: 5px;
+	background-color: #004231;
+	font-family: 'Raleway', sans-serif;
+	border-radius: 3px;
 	color: #fff;
 	padding: 10px 15px;
 	display: none;
 }
 #suma-total {
-	color: #fe4918;
+	color: #2c2a2a;
 	font-size: 2em;
 	text-align: center;
 	margin-top: -10px;
-	font-weight: bold;
+	font-weight: 400;
 }
 #error {
 	clear: both;
-	padding: 10px;
+	padding: 8px;
+	font-size: 1.2em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
 	text-align: center;
 	display: none;
+	border-radius: 3px;
+	background-color: rgba(223, 47, 41, 0.5);
 }

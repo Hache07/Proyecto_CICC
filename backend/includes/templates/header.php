@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/colorbox.css">
     <link rel="stylesheet" href="../css/toastr.min.css">
+    <link rel="stylesheet" href="../css/alertify.css">
+    <link rel="stylesheet" href="../css/themes/default.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/styles.css">
 

@@ -187,6 +187,7 @@ ul {
 }
 .button:hover {
     background-color: #003121!important;
+    color: #fff;
     cursor: pointer;
 }
 .btn-front:hover {
@@ -885,7 +886,7 @@ p.copyright {
 
 /** CALENDARIO **/
 div.calendario h3 {
-    background-color: #7abb3b;
+    background-color: #004231;
     clear: both;
     color: #fff;
     text-align: center;
@@ -917,7 +918,7 @@ div.dia:hover {
     transition: all .3s ease;
 }
 div.dia p.titulo {
-    color: #7abb3b;
+    color: #008000;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -925,7 +926,7 @@ div.dia p {
     font-size: 1em;
 }
 div.dia i {
-    color: #7abb3b;
+    color: #008000;
 }
 
 /** COLORBOX **/

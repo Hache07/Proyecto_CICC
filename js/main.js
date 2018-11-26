@@ -1,32 +1,112 @@
- // JavaScript source code
- /*function inicializar() {
-    //Opciones del mapa
-    var OpcionesMapa = {
-        center: new google.maps.LatLng(38.3489719, -0.4780289000000266),
-        mapTypeId: google.maps.MapTypeId.SATELLITE, //ROADMAP  SATELLITE HYBRID TERRAIN
-        mapMaker: true,
-        zoom: 16
-    };
- 
-    var miMapa;
-    //constructor
-    miMapa = new google.maps.Map(document.getElementById('mapa'), OpcionesMapa);
+(function() {
+    "use strict";
 
-    //Añadimos el marcador
-    var Marcador = new google.maps.Marker({
-                    position: new google.maps.LatLng(38.3489719, -0.4780289000000266),
-                    map: miMapa,
-                    title:"Santa Barbara"
-                });
-}
- 
-function CargaScript() {
-    var script = document.createElement('script');
-    script.src = 'https://maps.googleapis.com/maps/api/js?sensor=false&callback=inicializar';
-    document.body.appendChild(script);                 
-}
- 
-window.onload = CargaScript;*/
+    var regalo = document.getElementById('regalo');
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var nombre = document.getElementById('nombre');
+        var apellido = document.getElementById('apellido');
+        var email = document.getElementById('email');
+
+        var pase_dia = document.getElementById('pase_dia');
+        var pase_dosdias = document.getElementById('pase_dosdias');
+
+        var calcular = document.getElementById('calcular');
+        var errorDiv = document.getElementById('error');
+        var btnRegistro = document.getElementById('btnRegistro');
+        var lista_productos = document.getElementById('lista-productos');
+        var suma = document.getElementById('suma-total');
+
+        var camisas = document.getElementById('camisa_evento');
+
+        btnRegistro.disabled = true;
+
+        calcular.addEventListener('click', calcularMontos);
+        pase_dia.addEventListener('blur', mostrarDias);
+        pase_dosdias.addEventListener('blur', mostrarDias);
+
+        nombre.addEventListener('blur', validarCampos);
+        apellido.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarMail);
+
+        function validarCampos() {
+            if(this.value == '') {
+                errorDiv.style.display = "block";
+                errorDiv.innerHTML = "Este campo es obligatorio";
+                this.style.border = '1px solid #df2f2980';
+                errorDiv.style.border = '1px solid rgba(223, 47, 41, .5)';
+                errorDiv.style.color = 'white';
+            } else {
+                errorDiv.style.display = 'none';
+                this.style.border = 'none';
+            }
+        }
+
+        function validarMail() {
+            if(this.value.indexOf("@") > -1) {
+                errorDiv.style.display = 'none';
+                this.style.border = 'none';
+            } else {
+                errorDiv.style.display = "block";
+                errorDiv.innerHTML = "Por favor, introduce una dirección de correo electrónico válida.";
+                this.style.border = '1px solid #df2f2980';
+                errorDiv.style.border = '1px solid rgba(223, 47, 41, .5)';
+                errorDiv.style.color = 'white';
+            }
+        }
+
+        function calcularMontos(event) {
+            event.preventDefault();
+            if(regalo.value === '') {
+                alert('Selecciona un regalo porfavor');
+                regalo.focus();
+            } else {
+                var boletoDia = parseInt(pase_dia.value, 10) || 0,
+                    boletoDos = parseInt(pase_dosdias.value, 10) || 0,
+                    cantidadCamisas = parseInt(camisas.value, 10) || 0;
+
+                var totalPagar = (boletoDia * 30) + (boletoDos * 45) + ((cantidadCamisas * 10) * .93);
+
+                var listadoProductos = [];
+
+                if(boletoDia >= 1) {
+                    listadoProductos.push(' Estudiante: '+boletoDia);
+                }
+                if(boletoDos >= 1) {
+                    listadoProductos.push(' Docente: '+boletoDos);
+                }
+                if(cantidadCamisas >= 1) {
+                    listadoProductos.push(' Camisas: '+cantidadCamisas);
+                }
+
+                lista_productos.style.display = "block";
+				lista_productos.innerHTML = '';
+				for (var i = 0; i < listadoProductos.length; i++) {
+					lista_productos.innerHTML += listadoProductos[i] + '<br>';
+                }
+                suma.innerHTML = "$ " + totalPagar.toFixed(2);
+                btnRegistro.disabled = false;
+                document.getElementById('total_pedido').value = totalPagar;
+            }
+        }
+        function mostrarDias() {
+            var boletoDia = parseInt(pase_dia.value, 10) || 0,
+                boletoDos = parseInt(pase_dosdias.value, 10) || 0;
+
+            var diasElegidos = [];
+            if(boletoDia > 0) {
+                diasElegidos.push('calendario');
+            }
+            if(boletoDos > 0) {
+                diasElegidos.push('calendario');
+            }
+            for(var i = 0; i < diasElegidos.length; i++) {
+                document.getElementById(diasElegidos[i]).style.display = "block";
+            }
+        }
+    });
+})();
 
 $(function(){
 
@@ -75,3 +155,25 @@ $(function(){
     $('.invitado-info').colorbox({inline:true, width:"50%"});
 
 });
+
+$(document).ready(function() {
+    $('#ejecuta').click(function() {
+        alertify.warning('La pagina esta en proceso de desarrollo');
+    });
+})
+
+
+
+/*
+$(document).ready(function() {
+    $('#confirm').click(function() {
+        alertify.confirm("Confirmar","This is a confirm dialog.",
+        function(){
+            alertify.success('Ok');
+        },
+        function(){
+            alertify.error('Cancel');
+        });
+    });
+})
+*/

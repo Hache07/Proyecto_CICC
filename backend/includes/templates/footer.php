@@ -38,6 +38,7 @@
     <script src="../js/plugins.js"></script>
     <script src="../js/jquery.colorbox-min.js"></script> 
     <script src="../js/jquery.js"></script>
+    <script src="../js/alertify.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/toastr.min.js"></script>
 

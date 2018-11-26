@@ -68,7 +68,7 @@
         <div class="share">
             <p><i class="fas fa-share-alt"></i><strong>Seleccione una Facultad:</strong></p>
         </div>
-        <div class="row row-ini">
+        <div class="row row-carreras">
             <a href="ini_sistemas.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Tecnologia</div></a>
             <a href="ini_arquitectura.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Arquitectura</div></a>
             <a href="ini_medicina.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Medicina</div></a>

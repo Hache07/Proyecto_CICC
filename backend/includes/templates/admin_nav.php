@@ -5,7 +5,7 @@
     </div>
     <div class="">
         <nav>
-            <a href="admin_area.php"><i class="fa fa-home"></i> Home</a>|
+            <a href="panel_sistemas.php"><i class="fa fa-home"></i> Home</a>|
             <a href="registrados.php"> Ver registrados</a>|
             <a href="v_invitados.php">Ver invitados</a>|
             <a href="v_expositores.php">Ver expositores</a>|

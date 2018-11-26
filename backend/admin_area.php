@@ -11,7 +11,7 @@
             <div class="detalles">
                 <h4>Administrador - 2018</h4>
                 <p>Gran opción para realizar una carrera, un futuro y un camino en la vida.</p>
-                <button class="button b-admin">Ver detalles</button>
+                <button class="button b-admin" id="ejecuta">Ver detalles</button>
                 <button class="button b-admin-2">Sobre nosotros</button>
             </div>  
         </div>

@@ -35,7 +35,7 @@
 
                 while($registrados = $result->fetch_assoc()) { ?>
                     <tr>
-                        <th scope="row"><?php echo $registrados['id_registrados']; ?></th>
+                        <th scope="row"><?php echo $registrados['id_registrado']; ?></th>
                         <td><?php echo $registrados['nombre_registrado']." ".$registrados['apellido_registrado'];?></td>
                         <td><?php echo $registrados['email_registrado']; ?></td>
                         <td>
@@ -43,31 +43,8 @@
                                 echo date('jS F, Y H:i', strtotime($fecha));
                             ?>
                         </td>
-                        <td>
-                            <?php /*$articulos = $registrados['pases_articulo']; 
-                                $pedido = formatear_pedido($articulos);
-                                echo $pedido;*/
-                            ?>
-                        </td>
-                        <!--<td><?php //echo $registrados['talleres_registrados']; ?></td>-->
-                        <!-- <td><?php //echo $registrados['regalo']; ?></td> -->
                         <td>$<?php echo $registrados['total_pagado']; ?></td>
                     </tr>
-                    <!--<tr>
-                        <td colspan="7">
-                            Eventos registrados: <br>
-                            <?php /** $eventos = $registrados['talleres_registrados'];
-                                $sql = formatear_eventos_a_sql($eventos);
-                                $eventos_registrados = $conexion->query($sql);
-                                while($eventos = $eventos_registrados->fetch_assoc()) {
-                                    foreach($eventos as $evento):
-                                        echo utf8_encode($evento). ", ";
-                                    endforeach; 
-                                } */
-                              
-                            ?>
-                        </td>
-                    </tr>-->
             <?php }
                 $conexion->close();
             } catch(Exception $e) {

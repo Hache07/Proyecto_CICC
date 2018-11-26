@@ -21,6 +21,7 @@
             <th scope="col">Email</th>
             <th scope="col">Telefono</th>
             <th scope="col">Empresa</th>
+            <th scope="col">Accion</th>
         </tr>
     </thead>
     <tbody>
@@ -39,6 +40,14 @@
                         <td><?php echo $registrados['correo']; ?></td>
                         <td><?php echo $registrados['telefono']; ?></td>
                         <td><?php echo $registrados['empresa']; ?></td>
+                        <td>
+                            <a href="eliminar.php?id=<?php echo $registrados['id_evento']; ?>" class="float-right ml-3 mr-4">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                            <a href="index.php?id=<?php echo $dato['id_color']; ?>" class="float-right">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                        </td>
                     </tr>
             <?php }
                 $conexion->close();
