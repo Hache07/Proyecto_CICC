@@ -144,7 +144,7 @@ $(function(){
     $('#number-e').animateNumber({ number: 2800}, 1200);
 
     /** CUENTA REGRESIVA COUNTDOWN **/
-    $('.cuenta-regresiva').countdown('2018/11/26 09:00:00', function(event){
+    $('.cuenta-regresiva').countdown('2018/12/10 09:00:00', function(event){
         $('#dias').html(event.strftime('%D'));
         $('#horas').html(event.strftime('%H'));
         $('#minutos').html(event.strftime('%M'));

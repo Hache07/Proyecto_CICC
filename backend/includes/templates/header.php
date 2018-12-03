@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fbbb00"/>
     <title>Back-End | Congreso</title>
 
     <!-- Google Fonts -->
@@ -53,9 +54,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Contacto <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="login.php">Servicios</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Carreras
@@ -78,6 +76,15 @@
                             <a class="dropdown-item" href="panel_medicina.php">Medicina</a>
                         </div>
                     </li>   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Congresos
+                        </a>
+                        <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="crear_conferencia.php">Crear congreso</a>
+                            <a class="dropdown-item" href="panel_arquitectura.php">Ver congresos</a>
+                        </div>
+                    </li>  
                 </ul> 
             </div>
             <div class="link-cerrar col-md-3 col-sm-12">

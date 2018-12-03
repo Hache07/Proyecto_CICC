@@ -183,12 +183,12 @@
         }
     }
 
- /*   $nombre = $_POST['nombre'];
-    $fecha = $_POST['fecha'];
-    $hora = $_POST['hora'];
-    $id_cat = $_POST['categorias'];
-    $id_invitado = $_POST['invitado'];
-*/
+    $nombre = $_POST['name'];
+    $fecha = $_POST['date'];
+    $hora = $_POST['hour'];
+    $id_cat = $_POST['category'];
+    $id_invitado = $_POST['invited'];
+
     try {
         require_once('includes/funciones/conexion.php');
         $stmt = $conexion->prepare("SELECT cat_evento, COUNT(DISTINCT nombre_evento) FROM t_sistemas INNER JOIN categoria_evento ON t_sistemas.id_cat_evento=categoria_evento.id_categoria WHERE id_cat_evento = ? ");
@@ -229,16 +229,16 @@
                 <form action="insert_sistemas.php" method="POST">
                     <div class="form-group">
                         <label for="nombre">Nombre tema:</label>
-                        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese el tema a exponer" required>
+                        <input type="text" name="name" class="form-control" id="nombre" placeholder="Ingrese el tema a exponer" required>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="fecha">Fecha:</label>
-                            <input type="date" name="fecha" class="form-control" id="fecha" required>
+                            <input type="date" name="date" class="form-control" id="fecha" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="hora">Hora:</label>
-                            <input type="time" name="hora" class="form-control" id="hora" required>
+                            <input type="time" name="hour" class="form-control" id="hora" required>
                         </div>
                     </div>
                     
@@ -253,7 +253,7 @@
                                 while ($cat_eventos = $res->fetch_assoc()) {
                                     echo '<div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="categorias" value='.$cat_eventos['id_categoria'].' required>'." ".$cat_eventos['cat_evento'].'
+                                                <input type="radio" class="form-check-input" name="category" value='.$cat_eventos['id_categoria'].' required>'." ".$cat_eventos['cat_evento'].'
                                             </label>
                                         </div>';
                                 } 
@@ -270,7 +270,7 @@
                                 require_once('includes/funciones/conexion.php');
                                 $sql = "SELECT `id_invitado`, `nombre_invitado`, `apellido_invitado` FROM `invitados` ";
                                 $res_invitados = $conexion->query($sql);
-                                echo "<select class='custom-select' name='invitado'>";
+                                echo "<select class='custom-select' name='invited'>";
                                 while($invitados = $res_invitados->fetch_assoc()) { 
                         ?>
                                     <option value="<?php echo $invitados['id_invitado']; ?>">

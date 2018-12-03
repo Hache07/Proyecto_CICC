@@ -4,19 +4,18 @@
     border-radius: 2px;
     padding: 8px;
     margin-right: 20px;
+    float: left;
+    text-decoration: none!important;
+    color: #292b2c!important;
+    margin-left: 5px;
+    width: 180px;
 }
 .facu:hover {
     background-color: #dedede;
-
 }
 .seleccion {
     margin-top: 80px;
     font-family: 'Raleway', sans-serif;
-}
-.facu {
-    text-decoration: none!important;
-    color: #292b2c!important;
-    margin-left: 5px;
 }
 strong {
     margin-left: 10px;
@@ -360,3 +359,4 @@ footer.site-footer {
     margin-left: 60px;
     margin-top: 90px;
 }
+

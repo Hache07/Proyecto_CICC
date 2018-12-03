@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fbbb00"/>
     <title>XXI Congreso - UDABOL</title>
 
     <!-- Google Fonts -->
@@ -33,8 +32,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-
-    <span class="arriba fas fa-angle-up"></span>
+<span class="arriba fas fa-angle-up"></span>
     <div class="ini">        
         <div class="row container-fluid">
             <div class="col-sm-12 col-md-8 plena">
@@ -50,58 +48,49 @@
             </div>
         </div>
     </div><!--.ini-->
-    <div class="navbar barra-p fixed sticky-top">
+    <div class="navbar sticky-top">
         <nav class="navbar-expand-lg navbar-dark container-fluid row">
             <div class="logo col-md-3 col-sm-12" >
-                <a href="admin_area.php"><img src="IMG/logo.png" alt="logo udabol" style="width: 80%; margin-left:30px"></a>
+                <a href="index.php"><img src="IMG/logo.png" alt="logo udabol" style="width: 80%; margin-left:30px"></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse enlace-admin navbar-collapse col-md-6 col-sm-12" id="navbarNavDropdown" style="">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="conferencias.php">Conferencias <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="registro.php">Reservaciones</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="invitados.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Información
-                        </a>
-                        <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/ingenieria-de-sistemas-cbba/#1538426850149-9086cd82-fd0a" target="_blank">Ingenieria de Sistemas</a>
-                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/arquitectura-cochabamba/#1514538411946-fe9a23cd-d64b" target="_blank">Arquitectura</a>
-                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/derecho-cochabamba/" target="_blank">Derecho</a>
-                            <a class="dropdown-item" href="https://www.udabol.edu.bo/a/carreras/medicina-cbba/#1540914591514-72d2058b-6da9" target="_blank">Medicina</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="calendario.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Udabol
-                        </a>
-                        <div class="dropdown-menu drop-sub submenu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="https://academico.udabol.edu.bo/estudiante/" target="_blank">Sistema estudiantil</a>
-                        </div>
-                    </li>   
-                </ul> 
+              
             </div>
             <div class="link-cerrar col-md-3 col-sm-12">
-                <a class="nav-link float-right cerrar" href="https://www.udabol.edu.bo/a/solicitud-de-inscripcion/" target="_blank">¡Inscrívete ahora!</a>
             </div> 
         </nav>
     </div>
 
-    <div class="contenido-video">
-        <video autoplay loop src="video/Sistemas.mp4" type="video.mp4" class="video" poster=""></video>
-        <div class="texto-video">
-            Conferencias - 2018
+    <div class="seleccion container-fluid">
+        <div class="share">
+            <p><i class="fas fa-share-alt"></i><strong>Seleccione una Facultad:</strong></p>
         </div>
-        <div class="slogan-video">
-            <p class="slogan">XX Congreso internacional de <span>Ciencias de la Computación</span></p>
+        <div class="row row-carreras">
+                <!--<a href="ini_sistemas.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Tecnologia</div></a>
+                <a href="ini_arquitectura.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Arquitectura</div></a>
+                <a href="ini_medicina.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Medicina</div></a>
+                <a href="ini_derecho.php" class="col-md-2 facu"><div><i class="fas fa-user"></i> Derecho</div></a>
+                -->
+            <?php
+                try {
+                    require_once('includes/funciones/conexion.php');
+                    $sql = "SELECT `nombre_carrera` FROM `carreras` LEFT JOIN congresos ON carreras.id_carrera=congresos.id_congreso";
+                    $result = $conexion->query($sql);
+
+                    while($registrados = $result->fetch_assoc()) { ?>
+                        <div class="case">
+                            <a href="<?php the_permalink(); ?>" class="facu"><div><i class="fas fa-user mr-2"></i><?php echo $registrados['nombre_carrera']; ?></div></a>
+                        </div>
+                <?php }
+                    $conexion->close();
+                } catch(Exception $e) {
+                    $error = $e->getMessage();
+                }
+            ?>
         </div>
-        <div class="boton-video">
-            <a href="#" class="button b-admin btn-front">Registrarse</a>
-        </div>
-    </div><!--.contenido-video-->
+    </div>
+</body>
+</html>

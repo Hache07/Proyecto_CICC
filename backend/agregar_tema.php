@@ -3,7 +3,7 @@
         session_start();
         usuario_autenticado();
 
-        //if(isset($_POST['submit'])){
+        if(isset($_POST['submit'])){
             $nombre = $_POST['nombre'];
             $fecha = $_POST['fecha'];
             $hora = $_POST['hora'];
@@ -30,7 +30,7 @@
             } catch(Exception $e) {
                 echo "Error: ". $e->getMessage();
             } 
-        //}       
+        }       
     ?>
 
     <?php include_once 'includes/templates/header.php'; ?>
@@ -105,7 +105,7 @@
                         } 
                     ?>
                 </div>
-                <button type="submit" class="btn btn-block button">Registrar</button>
+                <button type="submit" name="submit" class="btn btn-block button">Registrar</button>
             </form>
             <?php $conexion->close(); ?>
         </div>

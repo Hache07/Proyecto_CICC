@@ -54,7 +54,7 @@
                     <strong>El registro se realizo con exito!</strong> 
                 </div>
             </div>
-            <?php header( "refresh:3; url=agregar_invitado.php" ); ?>
+            <?php //header( "refresh:3; url=agregar_invitado.php" ); ?>
         <?php endif;?>
 
         <div id="modal1" class="modalmask-b">
@@ -97,7 +97,7 @@
                     <strong>El registro se realizo con exito!</strong> 
                 </div>
             </div>
-            <?php header( "refresh:3; url=agregar_expositor.php" ); ?>
+            <?php //header( "refresh:3; url=agregar_expositor.php" ); ?>
         <?php endif;?>
 
         <div id="modal2" class="modalmask-b">
@@ -175,19 +175,19 @@
                     $stmt->execute();
                     $stmt->close();
                     $conexion->close();
-                    header('Location:agregar_expositor.php?exitoso=1');
+                    //header('Location:agregar_expositor.php?exitoso=1');
                 } catch(Exception $e) {
                     echo "Error: ". $e->getMessage();
                 }
             }
         }
 
-    /*   $nombre = $_POST['nombre'];
+    if(isset($_POST['submit'])) {
+        $nombre = $_POST['nombre'];
         $fecha = $_POST['fecha'];
         $hora = $_POST['hora'];
         $id_cat = $_POST['categorias'];
         $id_invitado = $_POST['invitado'];
-    */
         try {
             require_once('includes/funciones/conexion.php');
             $stmt = $conexion->prepare("SELECT cat_evento, COUNT(DISTINCT nombre_evento) FROM eventos INNER JOIN categoria_evento ON eventos.id_cat_evento=categoria_evento.id_categoria WHERE id_cat_evento = ? ");
@@ -195,7 +195,7 @@
             $stmt->execute();
             $stmt->bind_result($cat_evento, $total);
             $stmt->store_result();
-            $sql = "INSERT INTO `eventos` (nombre_evento, fecha_evento, hora_evento, id_cat_evento, id_inv, clave) VALUES (?,?,?,?,?,?)";
+            $sql = "INSERT INTO `t_arquitectura` (nombre_evento, fecha_evento, hora_evento, id_cat_evento, id_inv, clave) VALUES (?,?,?,?,?,?)";
             $stmt_two = $conexion->prepare($sql);
             $stmt->fetch();
             (int) $total = $total;
@@ -208,6 +208,7 @@
         } catch(Exception $e) {
             echo "Error: ". $e->getMessage();
         } 
+    }
     ?>
     <section class="admin seccion contendor">
         <?php 
@@ -217,7 +218,7 @@
                         <strong>El registro se realizo con exito!</strong> 
                     </div>
                 </div>
-        <?php   header( "refresh:3; url=agregar_tema.php" ); 
+        <?php   //header( "refresh:3; url=agregar_tema.php" ); 
             } ?>
         
         <div id="modal3" class="modalmask-b">
@@ -225,7 +226,7 @@
             <a href="#close" title="Close" class="close">X</a>
         <h2>Agregar Tema</h2>
         <div class="form-invitado col-md-12">
-            <form action="agregar_tema.php" method="POST">
+            <form action="insert_arquitectura.php" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre tema:</label>
                     <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese el tema a exponer" required>
@@ -282,7 +283,7 @@
                         } 
                     ?>
                 </div>
-                <button type="submit" class="btn btn-block button">Registrar</button>
+                <button type="submit" name="submit" class="btn btn-block button">Registrar</button>
             </form>
             <?php $conexion->close(); ?>
         </div>
